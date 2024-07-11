@@ -2,10 +2,14 @@
 
 <br />
 
+<p align="center">
+<img src="https://i.imgur.com/20c7aDB.jpeg" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
+
 
 <h2>Description</h2>
 
-This project utilizes Elastic Security SIEM to create a comprehensive detection engineering framework designed to ingest, monitor, and analyze data from three distinct environments. The objective is to effectively detect various simulated cyber threats, enhancing overall security posture.
+This project utilizes Elastic Security SIEM to ingest, monitor, and analyze data from three distinct environments in order to develop effective threat detection rules. The objective is to demonstrate how to effectively detect various simulated cyber threats, enhancing overall security posture.
 
 <br />
 
@@ -29,7 +33,22 @@ This project utilizes Elastic Security SIEM to create a comprehensive detection 
 ### **Environment 3 : Azure Cloud Environment**
 - <b>Apache Web Server VM (Ubuntu):</b> Hosts the Damn Vulnerable Web Application to simulate web application attacks
 - <b>Azure Storage Account:</b> Contains a blob file to similute data exfiltration and unauthorized access
-- <b>Azure Key Vault:</b> Stores secret values to simulate unauthorize access. 
+- <b>Azure Key Vault:</b> Stores secret values to simulate unauthorize access.
+
+<br />
+
+### **Simulated Attacks**
+
+- <b>Brute Force Attacks:</b> Simulates unauthorized access attempts to Windows and Linux machines through brute force techniques
+- <b>DDOS Attacks:</b> Simulates Distributed Denial of Service attacks 
+- <b>Wannacry Ransomeware Attack:</b> Simulates the Wannacry ransomware attack to test the detection of ransomeware threats
+- <b>Port Enumeration and Web Scanning:</b> Simulates network reconnaissance and vulnerability scanning activities
+- <b>Reverse Shell Attacks:</b> Simulates gaining remote access to a machine
+- <b>Pass The Hash Attacks:</b> Simulates credential theft and reuse 
+- <b>SQL Injection:</b> Simulates SQL Injection attacks on a vulnerable web server
+- <b>XSS Attacks (Reflected, Stored, and DOM):</b>Simulates Cross-Site Scripting atacks on a vulnerable web server
+- <b>Detecting Azure Blob Download:</b> Simulates unauthorized access and download of blob storage files
+- <b>Detecting Azure Key Vault Events:</b> Simulates unauthorized access to secret keys/values stored in Azure Key Vault
 
 <br />
 <br />
@@ -38,9 +57,69 @@ This project utilizes Elastic Security SIEM to create a comprehensive detection 
 <img src="https://i.imgur.com/88JdlYu.png" height="100%" width="100%" alt="Detection Engineering Diagram"/>
 </p>
 
-<h2>Languages Used</h2>
+# Walkthrough
 
-- <b>Bash:</b> File integrity monitor and Automation of Incident Response tasks
+</br>
+
+<b>Elastic & Environment Setup</b>
+
+</br>
+
+<b>Attack 1: Port Enumeration and Web Scanning</b>
+
+</br>
+
+<b>Attack 2: Windows and Linux Brute Force Attacks</b>
+
+</br>
+
+<b>Attack 3: Windows and Linux Brute Force Attacks</b>
+
+</br>
+
+<b>Attack 4: Reverse Shell</b>
+
+</br>
+
+<b>Attack 5: Distrubuted Denial Of Service</b>
+
+</br>
+
+<b>Attack 6: Distrubuted Denial Of Service</b>
+
+</br>
+
+<b>Attack 7: Pass The Hash</b>
+
+</br>
+
+<b>Attack 8: WannaCry.exe Ransomware</b>
+
+</br>
+
+<b>Attack 9: SQL Injection</b>
+
+</br>
+
+<b>Attack 10: XSS (Reflected, Stored, DOM)</b>
+
+</br>
+
+<b>Attack 11: Unauthorized Download of Azure Blob Storage</b>
+
+</br>
+
+<b>Attack 12: Unauthorized access to Azure Key Vault</b>
+
+</br>
+
+<b> BONUS: Showcase Of Man in the Middle Attack</b>
+
+</br>
+
+
+
+
 
 <h2>Utilities Used</h2>
 
