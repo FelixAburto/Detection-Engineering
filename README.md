@@ -54,7 +54,7 @@ This project utilizes Elastic Security SIEM to ingest, monitor, and analyze data
 <br />
 
 <p align="center">
-<img src="https://i.imgur.com/88JdlYu.png" height="100%" width="100%" alt="Detection Engineering Diagram"/>
+<img src="https://i.imgur.com/YgUt8DZ.png" height="100%" width="100%" alt="Detection Engineering Diagram"/>
 </p>
 
 # Walkthrough
@@ -73,43 +73,39 @@ This project utilizes Elastic Security SIEM to ingest, monitor, and analyze data
 
 </br>
 
-<b>Attack 3: Windows and Linux Brute Force Attacks</b>
+<b>Attack 3: Reverse Shell</b>
 
 </br>
 
-<b>Attack 4: Reverse Shell</b>
+<b>Attack 4: Distributed Denial Of Service</b>
 
 </br>
 
-<b>Attack 5: Distrubuted Denial Of Service</b>
+<b>Attack 5: Pass The Hash</b>
 
 </br>
 
-<b>Attack 6: Pass The Hash</b>
+<b>Attack 6: WannaCry.exe Ransomware</b>
 
 </br>
 
-<b>Attack 7: WannaCry.exe Ransomware</b>
+<b>Attack 7: SQL Injection</b>
 
 </br>
 
-<b>Attack 8: SQL Injection</b>
+<b>Attack 8: XSS (Reflected, Stored, DOM)</b>
 
 </br>
 
-<b>Attack 9: XSS (Reflected, Stored, DOM)</b>
+<b>Attack 9: Unauthorized Download of Azure Blob Storage</b>
 
 </br>
 
-<b>Attack 10: Unauthorized Download of Azure Blob Storage</b>
+<b>Attack 10: Unauthorized access to Azure Key Vault</b>
 
 </br>
 
-<b>Attack 11: Unauthorized access to Azure Key Vault</b>
-
-</br>
-
-<b> BONUS: Showcase Of Man in the Middle Attack</b>
+<b>BONUS: Showcase Of Man in the Middle Attack</b>
 
 </br>
 
