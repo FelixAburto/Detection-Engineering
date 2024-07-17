@@ -60,7 +60,9 @@ The first step to setting up our environment is to install Oracle VirtualBox, th
 
 </br>
 
-<h3>Windows 11 ISO Download:</h3> 
+<h3>Windows 11 ISO Download</h3> 
+
+</br>
 
 To download the ISO for the Windows 11 Virtual Machine visit https://www.microsoft.com/en-us/evalcenter/evaluate-windows-11-enterprise. Click on "Download the ISO - Windows 11 Enterprise" and fill out the informationt to download the ISO.
 
@@ -73,7 +75,9 @@ To download the ISO for the Windows 11 Virtual Machine visit https://www.microso
 </br>
 </br>
 
-<h3>Windows 11 VM Installation:</h3>
+<h3>Windows 11 VM Installation</h3>
+
+</br>
 
 Now that we have the ISO downloaded lauch Oracle VirtualBox and hover over to the "machine" option located on the top of the application. Go down to the "New" option and this will launch the wizard to create a new Virtual Machine.
 
@@ -144,7 +148,7 @@ Once your virtual machine is finished right click on the virtual machine and sel
 </br>
 </br>
 
-<h3>Windows 11 VM Configuration:</h3>
+<h3>Windows 11 VM Configuration</h3>
 
 </br>
 
@@ -303,7 +307,9 @@ Finally go to your Windows VM and open up powershell in Administrator mode. Simp
 
 </br>
 
-<h3>Ubuntu Linux ISO Download:</h3>
+<h3>Ubuntu Linux ISO Download</h3>
+
+</br>
 
 To download the Ubuntu Linux ISO go to https://ubuntu.com/download/desktop and click "Download 24.04 LTS"
 
@@ -313,7 +319,9 @@ To download the Ubuntu Linux ISO go to https://ubuntu.com/download/desktop and c
 
 </br>
 
-<h3>Ubuntu Linux Installation:</h3>
+<h3>Ubuntu Linux Installation</h3>
+
+</br>
 
 <b>Virtual Machine Name and Operating System:</b>
 
@@ -378,6 +386,8 @@ After you click finish the VM should start up and once finished the Ubuntu insta
 
 <h3>Ubuntu Linux Configuration</h3>
 
+</br>
+
 <b>Configuring Static IP Address:</b>
 
 To configure the static ip address that we'll be using click on the network icon on the top right corner. A popup should appear with the option "Wired". Click on the arrow to open up another popup then click on "Wired Settings". This will open up the network settings for the VM. Afterwards click the gear icon for the "enp0s8" interface. Finally set the IP address to 10.0.0.3 and the subnet mask to 255.255.255.0
@@ -422,8 +432,9 @@ Finally apply the configuration by inputing "sudo netplan apply". Verify that th
 
 </br>
 
-<h3>Installing and Configuring Zeek:</h3>
+<h3>Installing and Configuring Zeek</h3>
 
+</br>
 
 <h2>Parrot OS VM Setup</h2>
 
