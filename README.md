@@ -53,6 +53,13 @@ The first step to setting up our environment is to install Oracle VirtualBox, th
 
 </br>
 
+<p align="center">
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Windows_11_logo.svg" height="50%" width="50%" alt="Win 11 Hardware"/>
+</p>
+
+
+</br>
+
 <h3>Windows 11 ISO Download:</h3> 
 
 To download the ISO for the Windows 11 Virtual Machine visit https://www.microsoft.com/en-us/evalcenter/evaluate-windows-11-enterprise. Click on "Download the ISO - Windows 11 Enterprise" and fill out the informationt to download the ISO.
@@ -151,6 +158,8 @@ To configure the VM for the internal network we need to open up the "Control Pan
 
 Finally set the IP address to 10.0.0.4 and the Subnet Mask to 255.255.255.0  Once you are finished click "ok" and then "Apply". 
 
+***Note: for the 192.168.1.0/24 environment simply follow these same steps but change 10.0.0.4 to 192.168.1.4***
+
 
 <p align="center">
 <img src="https://i.imgur.com/y1goD77.png" height="50%" width="50%" alt="Win 11 Hardware"/>
@@ -190,6 +199,16 @@ Next set the "Firewall State" to off for "Domain Profile", "Private Profile', an
 
 </br>
 
+<b>Turning off real-time protection and enabling behavior monitoring through Local Group Policy Editor:</b>
+
+In the Windows search box search for "gpedit.msc". Under "Computer Configuration expand "Administrative Templates" then expand "Windows Components". Scroll down to find "Microsoft Defender Antivirus" and expand it then click on "Real-Time Protection". Finally, double click on "Turn off real-time protection" set it to enable then do the same for the "Turn on behavior monitoring" option
+
+<p align="center">
+<img src="https://i.imgur.com/ycoiQJC.png" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+</br>
+
 <b>Installing and Configuring Sysmon:</b>
 
 To install Sysmon go to https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon and download the Sysmon zip file and extract it. 
@@ -215,7 +234,61 @@ This will install and configure sysmon on the Windows 11 VM.
 
 <b>Enable Powershell Logging:</b>
 
+In the Windows search box search for "gpedit.msc". Under "Computer Configuration expand "Administrative Templates" then expand "Windows Components". Scroll down to find "Windows Powershell". Double click on "Turn on Module Logging" set it to enable then do the same for the "Turn on PowerShell Script Block Logging", "Turn on Script Execution", and "Turn on Powershell Transcription" 
 
+<p align="center">
+<img src="https://i.imgur.com/7FTPyiT.png" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+</br>
+
+<b>Adding Windows Integration in Elastic:</b>
+
+Log into your Elastic Environment and access your Elastic deployment. Once there at the top of the webpage there is a searchbox. Search for "Windows" and the Windows Integration tool for Elastic should pop up. Click on the option and then click on the "Add Windows" button.
+
+<p align="center">
+<img src="https://i.imgur.com/UnnKSK4.png" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+Afterwards it will take your the windows integration configurations page. Make sure that these options are enabled:
+
+- Collect events from the following Windows Event Log channels
+- Forwarded
+- Powershell
+- Powershell Operational
+- Sysmon Operational
+- Collect windows perfmon and service metrics
+- Windows service metrics
+
+Scroll down to "Where to add this integration?" and make sure the "New Hosts" section is highlighted. Under "New agent policy name" input a name for your windows elastic agent. Finally add the agent.
+
+<p align="center">
+<img src="https://i.imgur.com/a1iZanX.gif" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+After the Windows Integration is added a popup should appear asking you to add the elastic agent to the host. Click on the "Add Elastic Agent to your hosts" button.
+
+<p align="center">
+<img src="https://i.imgur.com/zz3vIyA.png" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+Then another popup will appear with intstruction on how to install the agent. Under "Install Elastic Agent on your hosts" click on the windows section and copy the command below.
+
+<p align="center">
+<img src="https://i.imgur.com/PgZQEim.png" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+Finally go to your Windows VM and open up powershell in Administrator mode. Simply paste the command into the terminal and the agent will install.
+
+***Note: Shared clipboard must be enabled on your VM in order to paste from your host to your VM***
+
+<p align="center">
+<img src="https://i.imgur.com/dJDeKpm.gif" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+</br>
+
+<b>Windows 11 VM Setup is Complete!</b>
 
 <h2>Ubuntu (Zeek/Bro) VM Setup</h2>
 
