@@ -436,6 +436,32 @@ Finally apply the configuration by inputing "sudo netplan apply". Verify that th
 
 </br>
 
+<b>Zeek Installation:</b>
+
+To install Zeek first visit https://docs.zeek.org/en/master/install.html and copy this command:
+
+```bash
+echo 'deb http://download.opensuse.org/repositories/security:/zeek/xUbuntu_22.04/ /' | sudo tee /etc/apt/sources.list.d/security:zeek.list
+curl -fsSL https://download.opensuse.org/repositories/security:zeek/xUbuntu_22.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/security_zeek.gpg > /dev/null
+sudo apt update
+sudo apt install zeek-6.0
+```
+
+Open up a terminal in your Ubuntu VM and switch to root using "sudo -i". Paste this command to install zeek on your machine.
+
+***Note: you have to have curl installed in order to install zeek. If you do not have curl install you can install it by entering "sudo apt install curl" into the Linux terminal.***
+
+<p align="center">
+<img src="https://i.imgur.com/SEBbQ0U.png" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+</br>
+
+<b>Zeek Configuration:</b>
+
+
+
+
 <h2>Parrot OS VM Setup</h2>
 
 <h2>Kali Linux VM Setup</h2>
