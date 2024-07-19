@@ -59,7 +59,11 @@ This project utilizes Elastic Security SIEM to ingest, monitor, and analyze data
 
 # Walkthrough
 
+</br>
+
 <h2>Elastic & Environment Setup:</h2>
+
+</br>
 
 - <b>Elastic Cloud & Oracle Virtualbox</b>
 
