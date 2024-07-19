@@ -59,53 +59,78 @@ This project utilizes Elastic Security SIEM to ingest, monitor, and analyze data
 
 # Walkthrough
 
-</br>
+<h2>Elastic & Environment Setup:</h2>
 
-<b>Elastic & Environment Setup</b>
-
-</br>
-
-<b>Attack 1: Port Enumeration and Web Scanning</b>
+- <b>Elastic Cloud & Oracle Virtualbox</b>
 
 </br>
 
-<b>Attack 2: Windows and Linux Brute Force Attacks</b>
+- <b>Windows 11 VM Setup</b>
 
 </br>
 
-<b>Attack 3: Reverse Shell</b>
+- <b>Ubuntu Linux VM Setup (Zeek/Bro)</b>
 
 </br>
 
-<b>Attack 4: Distributed Denial Of Service</b>
+- <b>Parrot OS VM Setup</b>
 
 </br>
 
-<b>Attack 5: Pass The Hash</b>
+- <b>Kali Linux VM Setup</b>
 
 </br>
 
-<b>Attack 6: WannaCry.exe Ransomware</b>
+- <b>Microsoft Azure Setup</b>
 
 </br>
 
-<b>Attack 7: SQL Injection</b>
+
+<h2>Attacks and Detections:</h2>
 
 </br>
 
-<b>Attack 8: XSS (Reflected, Stored, DOM)</b>
+- <b>Attack 1: Port Enumeration and Web Scanning</b>
 
 </br>
 
-<b>Attack 9: Unauthorized Download of Azure Blob Storage</b>
+- <b>Attack 2: Windows and Linux Brute Force Attacks</b>
 
 </br>
 
-<b>Attack 10: Unauthorized access to Azure Key Vault</b>
+- <b>Attack 3: Reverse Shell</b>
 
 </br>
 
-<b>BONUS: Showcase Of Man in the Middle Attack</b>
+- <b>Attack 4: Distributed Denial Of Service</b>
+
+</br>
+
+- <b>Attack 5: Pass The Hash</b>
+
+</br>
+
+- <b>Attack 6: WannaCry.exe Ransomware</b>
+
+</br>
+
+- <b>Attack 7: SQL Injection</b>
+
+</br>
+
+- <b>Attack 8: XSS (Reflected, Stored, DOM)</b>
+
+</br>
+
+- <b>Attack 9: Unauthorized Download of Azure Blob Storage</b>
+
+</br>
+
+- <b>Attack 10: Unauthorized access to Azure Key Vault</b>
+
+</br>
+
+- <b>BONUS: Showcase Of Man in the Middle Attack</b>
 
 </br>
 
