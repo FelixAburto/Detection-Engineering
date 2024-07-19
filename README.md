@@ -65,27 +65,28 @@ This project utilizes Elastic Security SIEM to ingest, monitor, and analyze data
 
 </br>
 
-- <b>Elastic Cloud & Oracle Virtualbox</b>
+- **[Elastic Cloud & Oracle VirtualBox](https://github.com/FelixAburto/Detection-Engineering/tree/Elastic-and-Oracle-Virtualbox)**
 
 </br>
 
-- <b>Windows 11 VM Setup</b>
+- **[Windows 11 VM Setup](https://github.com/FelixAburto/Detection-Engineering/tree/Windows-VM-Setup)**
+
 
 </br>
 
-- <b>Ubuntu Linux VM Setup (Zeek/Bro)</b>
+- **[Ubuntu Linux VM (Zeek/Bro) Setup](https://github.com/FelixAburto/Detection-Engineering/tree/Ubuntu-(Zeek/Bro)-VM-Setup)**
 
 </br>
 
-- <b>Parrot OS VM Setup</b>
+- **[Parrot OS VM Setup](https://github.com/FelixAburto/Detection-Engineering/tree/Parrot-OS-VM-Setup)**
 
 </br>
 
-- <b>Kali Linux VM Setup</b>
+- **[Kali Linux VM Setup](https://github.com/FelixAburto/Detection-Engineering/tree/Kali-Linux-VM-Setup)**
 
 </br>
 
-- <b>Microsoft Azure Setup</b>
+- **[Kali Linux VM Setup](https://github.com/FelixAburto/Detection-Engineering/tree/Microsoft-Azure-Setup)**
 
 </br>
 
