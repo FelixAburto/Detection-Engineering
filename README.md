@@ -246,6 +246,10 @@ In the Windows search box search for "gpedit.msc". Under "Computer Configuration
 
 </br>
 
+<h3>Installing Elastic Windows Integration</h3>
+
+</br>
+
 <b>Adding Windows Integration in Elastic:</b>
 
 Log into your Elastic Environment and access your Elastic deployment. Once there at the top of the webpage there is a searchbox. Search for "Windows" and the Windows Integration tool for Elastic should pop up. Click on the option and then click on the "Add Windows" button.
@@ -459,15 +463,179 @@ Open up a terminal in your Ubuntu VM and switch to root using "sudo -i". Paste t
 
 <b>Zeek Configuration:</b>
 
+To configure Zeek for this project first navigate to /opt/zeek/etc and go into the network configuration by entering "sudo nano networks.cfg"
 
+<p align="center">
+<img src="https://i.imgur.com/xC5pUPS.png" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+Then add "10.0.0.0/24 Internal Network" to the configuration page and save it.
+
+***Note: if you are configuring the 192.168.1.0/24 environment simply replace 10.0.0.0/24 with 192.168.1.0/24***
+
+<p align="center">
+<img src="https://i.imgur.com/ba5RX5e.png" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+Afterwards go into node.cfg by entering the command "sudo nano node.cfg". Where it says "interface=" enter in the interface of the interntal network adapter that we setup which should be "interface=enp0s8"
+
+***Note: if your network adapter is named differently simply enter the "ip addr" command to see what is the name of the interface of our internal network adapter***
+
+<p align="center">
+<img src="https://i.imgur.com/Hsbh8tn.png" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+Next we need to navigate to the __load__.zeek file. To do this enter in the command "cd /opt/zeek/share/policy/tuning/defaults/". Then enter into the configuration file by entering " sudo nano __load__.zeek"
+
+<p align="center">
+<img src="https://i.imgur.com/eeR00h7.png" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+In the next empty line add the following to the file "@load ../json-logs.zeek". This will convert the zeek logs into JSON format so that it can later be ingested into Elastic.
+
+<p align="center">
+<img src="https://i.imgur.com/DkvQfxo.png" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+</br>
+
+<b>Starting Zeek</b>
+
+To start Zeek navigate to the "zeekctl" file by entering "cd /opt/zeek/bin". The execute the file by entering "sudo ./zeekctl". After the file has been execute enter in "deploy" to kickoff the configurations and start Zeek. The next time you need to start zeek simply execute the "zeekctl" command and enter in "start". This will start the program without needing to redeploy 
+
+<p align="center">
+<img src="https://i.imgur.com/v9nZFCb.png" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+</br>
+
+<b>Verifying Zeek JSON logs</b>
+
+To verify that the zeek logs are in JSON format navigate to the logs folder by entering "cd /opt/zeek/logs/current" then enter in the command "cat conn.log". The logs that are printed to the terminal should be in JSON format.
+
+<p align="center">
+<img src="https://i.imgur.com/wBKJNyP.png" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+</br>
+
+<h3>Installing Elastic Zeek Integration</h3>
+
+Go into your Elastic environment and in the search box at the top of the page search for "Zeek" and click the option for the Zeek integration tool. Then click on the "Add Zeek" button.
+
+<p align="center">
+<img src="https://i.imgur.com/iBYrvaW.png" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+Next leave everything as default and scroll down to the bottom of the page. Make sure "New Host" is highlighted and add a name for this agent policy (I entered the name "Ubuntu Agent"). Afterwards a popup should appear asking you to add the elastic agent to the host. Click on the "Add Elastic Agent to your hosts" button. Finally, it another popup will appear with instruction on how to install the elastic agent. Make sure that the "Linux Tar" option is highlighted and copy the command then paste it into the Ubuntu VM terminal. The Elastic agent along with the Zeek Integration should be installed.
+
+<p align="center">
+<img src="https://i.imgur.com/G74juTI.png" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+<p align="center">
+<img src="https://i.imgur.com/YMqsEty.png" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+</br>
+</br>
+
+<b>Ubuntu Linux with Zeek Setup Complete!</b>
 
 
 <h2>Parrot OS VM Setup</h2>
 
+<h3>Parrot OS Download</h3>
+
+To download Parrot OS vist https://parrotsec.org/ and click on the blue download button. In the next page click on the "Virtual" option and after that click the "Security" Option. Afterwards select the "AMD64" option and it will take you to the download page. Finally click on "download" and "Virtualbox" to start the download.
+
+<p align="center">
+<img src="https://i.imgur.com/djC131E.gif" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+
+<h3>Parrot OS Installation</h3>
+
+To install Parrot OS simply double click on the .OVA file that was download and it will bring up Virtualbox with all the settings already populated. Leave everything as default and click "finish" then wait for the VM to be imported and your done!
+
+<p align="center">
+<img src="https://i.imgur.com/mrevUmM.gif" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+</br>
+
+<h3>Parrot OS Configuration</h3>
+
+To configure Parrot OS for this project right click on your virtual machine and select "Settings" then click on the "Network" option. Afterwards click on  the "Adapter 2" option and check the "Enable Network Adapter". In the "Attached to" drop down menu select "Internal Network" and select the name of your internal network. Under "Advance settings" go to the "Promiscuous Mode" option and select "Allow All".
+
+<p align="center">
+<img src="https://i.imgur.com/HyvAcBm.png" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+</br>
+
+Next start up the Parrot OS VM and click on the "menu" option on the bottom left then search for "Advance Network Configuration". Afterwards select "Wired Connection 2" and go to the "IPv4 Settings" section. There add the ip address 10.0.0.5 and set the subnet mask as "24".
+
+***Note: for the 192.168.1.0 environment simply replace 10.0.0.5 with 192.168.1.5***
+
+<p align="center">
+<img src="https://i.imgur.com/39il7wl.gif" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+
+</br>
+</br>
+
+<b>Parrot OS Setup Complete!<b>
+
+</br>
+
 <h2>Kali Linux VM Setup</h2>
+
+<h3>Kali Linux Download</h3>
+
+To download Kali Linux visit https://www.kali.org/ and select "download". In the next page select the "Virtual Machines" options the select the "Virtualbox" option. The zip file containing the VM should start after click select that option.
+
+<p align="center">
+<img src="https://i.imgur.com/bq6zI3N.gif" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+
+</br>
+
+<h3>Kali Linux Installation</h3>
+
+To install Kali linux unzip the zip file that was download. Next head inside the kali linux folder and double click the ".vbox" file. This will automatically install and import Kali Linux into Virutalbox.
+
+<p align="center">
+<img src="https://i.imgur.com/bq6zI3N.gif" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+<h3>Kali Linux Configuration</h3>
+
+To configure Kali Linux for this project right click on your virtual machine and select "Settings" then click on the "Network" option. Afterwards click on  the "Adapter 2" option and check the "Enable Network Adapter". In the "Attached to" drop down menu select "Internal Network" and select the name of your internal network. Under "Advance settings" go to the "Promiscuous Mode" option and select "Allow All".
+
+<p align="center">
+<img src="https://i.imgur.com/VTE279T.png" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+</br>
+
+Next start up the Kali linux VM and click on the Kali icon button on the top right then search for "Advance Network Configuration". Afterwards select "Wired Connection 2" and go to the "IPv4 Settings" section. There add the ip address "192.168.1.6" and set the subnet mask as "24".
+
+<p align="center">
+<img src="https://i.imgur.com/q7OmBjJ.gif" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+
+</br>
+</br>
+
+<b>Kali Linux Setup Complete!<b>
+
 
 <h2>Microsoft Azure Setup</h2>
 
-<h2>Damn Vulnerable Web Application Setup</h2>
+
 
 
