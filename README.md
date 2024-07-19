@@ -543,15 +543,22 @@ Next leave everything as default and scroll down to the bottom of the page. Make
 <b>Ubuntu Linux with Zeek Setup Complete!</b>
 
 
+
 <h2>Parrot OS VM Setup</h2>
+</br>
+<p align="center">
+<img src="https://gdm-catalog-fmapi-prod.imgix.net/ProductLogo/b91dba39-aef6-4808-be11-8eda81f81f56.png" height="25%" width="25%" alt="Win 11 Hardware"/>
+</p>
 
 <h3>Parrot OS Download</h3>
 
 To download Parrot OS vist https://parrotsec.org/ and click on the blue download button. In the next page click on the "Virtual" option and after that click the "Security" Option. Afterwards select the "AMD64" option and it will take you to the download page. Finally click on "download" and "Virtualbox" to start the download.
 
 <p align="center">
-<img src="https://i.imgur.com/djC131E.gif" height="100%" width="100%" alt="Win 11 Hardware"/>
+<img src="https://i.imgur.com/tlsSRCo.png" height="100%" width="100%" alt="Win 11 Hardware"/>
 </p>
+
+</br>
 
 
 <h3>Parrot OS Installation</h3>
@@ -586,18 +593,25 @@ Next start up the Parrot OS VM and click on the "menu" option on the bottom left
 </br>
 </br>
 
-<b>Parrot OS Setup Complete!<b>
+<b>Parrot OS Setup Complete!</b>
 
 </br>
 
 <h2>Kali Linux VM Setup</h2>
+
+</br>
+
+<p align="center">
+<img src="https://seeklogo.com/images/K/kali-linux-logo-AED181186E-seeklogo.com.png" height="25%" width="25%" alt="Win 11 Hardware"/>
+</p>
+
 
 <h3>Kali Linux Download</h3>
 
 To download Kali Linux visit https://www.kali.org/ and select "download". In the next page select the "Virtual Machines" options the select the "Virtualbox" option. The zip file containing the VM should start after click select that option.
 
 <p align="center">
-<img src="https://i.imgur.com/bq6zI3N.gif" height="100%" width="100%" alt="Win 11 Hardware"/>
+<img src="https://i.imgur.com/zi09Mz3.png" height="100%" width="100%" alt="Win 11 Hardware"/>
 </p>
 
 
@@ -605,11 +619,14 @@ To download Kali Linux visit https://www.kali.org/ and select "download". In the
 
 <h3>Kali Linux Installation</h3>
 
+
 To install Kali linux unzip the zip file that was download. Next head inside the kali linux folder and double click the ".vbox" file. This will automatically install and import Kali Linux into Virutalbox.
 
 <p align="center">
-<img src="https://i.imgur.com/bq6zI3N.gif" height="100%" width="100%" alt="Win 11 Hardware"/>
+<img src="https://i.imgur.com/ar1yXTP.gif" height="100%" width="100%" alt="Win 11 Hardware"/>
 </p>
+
+</br>
 
 <h3>Kali Linux Configuration</h3>
 
@@ -618,8 +635,6 @@ To configure Kali Linux for this project right click on your virtual machine and
 <p align="center">
 <img src="https://i.imgur.com/VTE279T.png" height="100%" width="100%" alt="Win 11 Hardware"/>
 </p>
-
-</br>
 
 Next start up the Kali linux VM and click on the Kali icon button on the top right then search for "Advance Network Configuration". Afterwards select "Wired Connection 2" and go to the "IPv4 Settings" section. There add the ip address "192.168.1.6" and set the subnet mask as "24".
 
@@ -631,11 +646,34 @@ Next start up the Kali linux VM and click on the Kali icon button on the top rig
 </br>
 </br>
 
-<b>Kali Linux Setup Complete!<b>
+<b>Kali Linux Setup Complete!</b>
 
 
 <h2>Microsoft Azure Setup</h2>
 
+<p align="center">
+<img src="https://swimburger.net/media/ppnn3pcl/azure.png" height="25%" width="25%" alt="Win 11 Hardware"/>
+</p>
 
 
+<h3>Create an Azure Account</h3>
 
+To create a Microsoft Azure account visit https://azure.microsoft.com/en-us and select the "Sign In" button on the top right corner. Afterwards sign up with your Microsoft account or create one if you do not have one.
+
+<p align="center">
+<img src="https://i.imgur.com/JbAavOs.png" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+
+<h3>200$ Free Azure Credits</h3>
+
+After you are logged into the Azure Portal select the option for "Start with an Azure Free Trail" where it gives you the option to gain 200$ worth of free Azure credits. Simply fill out the needed information and you should be approved!
+
+<p align="center">
+<img src="https://i.imgur.com/HdXZ04W.png" height="100%" width="100%" alt="Win 11 Hardware"/>
+</p>
+
+</br>
+</br>
+
+<b>Azure Setup Complete!</b>
