@@ -86,7 +86,7 @@ This project utilizes Elastic Security SIEM to ingest, monitor, and analyze data
 
 </br>
 
-- **[Kali Linux VM Setup](https://github.com/FelixAburto/Detection-Engineering/tree/Microsoft-Azure-Setup)**
+- **[Microsoft Azure Setup](https://github.com/FelixAburto/Detection-Engineering/tree/Microsoft-Azure-Setup)**
 
 </br>
 
