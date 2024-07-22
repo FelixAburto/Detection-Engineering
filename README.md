@@ -61,7 +61,7 @@ This project utilizes Elastic Security SIEM to ingest, monitor, and analyze data
 
 </br>
 
-<h2>Elastic & Environment Setup:</h2>
+<h2>Elastic & Environment Setup</h2>
 
 </br>
 
@@ -91,11 +91,13 @@ This project utilizes Elastic Security SIEM to ingest, monitor, and analyze data
 </br>
 
 
-<h2>Attacks and Detections:</h2>
+<h2>Attacks and Detections</h2>
+
+<h3>10.0.0.0/24 Environment:</h3>
 
 </br>
 
-- <b>Attack 1: Port Enumeration and Web Scanning</b>
+- **[Attack 1 : Port Enumeration and Web Scanning (Start Here!) ](https://github.com/FelixAburto/Detection-Engineering/tree/Port-Enumeration-and-Web-Scanning)**
 
 </br>
 
@@ -103,7 +105,11 @@ This project utilizes Elastic Security SIEM to ingest, monitor, and analyze data
 
 </br>
 
-- <b>Attack 3: Reverse Shell</b>
+- <b>Attack 3: Reverse Shell + Elastic Defend</b>
+
+</br>
+
+<h3>192.168.1.0/24 Environment:</h3>
 
 </br>
 
@@ -116,6 +122,10 @@ This project utilizes Elastic Security SIEM to ingest, monitor, and analyze data
 </br>
 
 - <b>Attack 6: WannaCry.exe Ransomware</b>
+
+</br>
+
+<h3>Microsoft Azure Environment:</h3>
 
 </br>
 
@@ -135,7 +145,11 @@ This project utilizes Elastic Security SIEM to ingest, monitor, and analyze data
 
 </br>
 
-- <b>BONUS: Showcase Of Man in the Middle Attack</b>
+<h3>BONUS:</h3>
+
+</br>
+
+- <b>Showcase Of Man in the Middle Attack</b>
 
 </br>
 
