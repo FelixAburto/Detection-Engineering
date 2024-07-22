@@ -4,6 +4,10 @@
 <img src="https://i.imgur.com/h2Ioyda.png" height="25%" width="25%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
 
+<h2>Description</h2>
+
+For this section, we will create detection rules for port enumeration and web scanning using tools such as Nmap, Nikto, and Zap to perform these scans.
+
 
 <h2>The Attack</h2>
 
