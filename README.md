@@ -101,7 +101,7 @@ This project utilizes Elastic Security SIEM to ingest, monitor, and analyze data
 
 </br>
 
-- **[Attack 2 : Windows & Linux Brute Force Attack) ](https://github.com/FelixAburto/Detection-Engineering/tree/Windows-and-Linux-Brute-Force-Attack)**
+- **[Attack 2 : Windows & Linux Brute Force Attack ](https://github.com/FelixAburto/Detection-Engineering/tree/Windows-and-Linux-Brute-Force-Attack)**
 
 </br>
 
