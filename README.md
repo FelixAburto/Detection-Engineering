@@ -101,11 +101,11 @@ This project utilizes Elastic Security SIEM to ingest, monitor, and analyze data
 
 </br>
 
-- <b>Attack 2: Windows and Linux Brute Force Attacks</b>
+- **[Attack 2 : Windows & Linux Brute Force Attack) ](https://github.com/FelixAburto/Detection-Engineering/tree/Windows-and-Linux-Brute-Force-Attack)**
 
 </br>
 
-- <b>Attack 3: Reverse Shell + Elastic Defend</b>
+- <b>Attack 3: Reverse Shell</b>
 
 </br>
 
