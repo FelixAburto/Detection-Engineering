@@ -27,7 +27,7 @@ The first thing we need to do to set this attack up is to configure our virtual 
 Afterwards we need to enable "Remote Desktop" on our Windows VM. To do this open up the Windows settings and scroll down until you see the option for "Remote Desktop". Select that option and you should now see a switch to enable "Remote Desktop" on this Windows VM. Enable it and verify that you can remote into the VM by using "Remote Desktop Connection" from your host machine. Enter in the IP address of your Windows VM in Remote Desktop Connection and then enter in the Username and Password of your Windows 11 VM user account. 
 
 <p align="center">
-<img src="https://i.imgur.com/SO2DL8S.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+<img src="https://i.imgur.com/XgbyVN8.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 <img src="https://i.imgur.com/AWSkWeV.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
 
@@ -66,4 +66,25 @@ This will execute the brute force simulation script and it should look something
 </br>
 
 <h2>Windows Brute Force Detection</h2>
+
+<h3>Windows Brute Force Query:</h3>
+
+To build our query first we need to think about what exactly what we are looking for. To detect Brute Force attacks we need to be able to detect a mass number of logon attempts over a short period of time. To start lets go to "Analytics" and "Discover" in Elastic. Once there enter in the query "*4625* and *User*". This will bring up all logs that have "User" and "4625" as a value. We should now see logs that contain failed logon attempts from out attack. From these logs we are going to build our query.
+
+<p align="center">
+<img src="https://i.imgur.com/uC3XUtK.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+<img src="https://i.imgur.com/xplT8gE.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
+
+The query for our detection rule is going to be: "data_stream.dataset : "system.security" and event.code : "4625" and winlog.logon.failure.reason : "Unknown user name or bad password.""
+
+-  data_stream.dataset : "system.security" looks for logs that have the dataset "system.security"
+-  event.code : "4625" looks for logs that contains the Windows Event Log 4625
+-  winlog.logon.failure.reason :  "Unknown user name or bad password." looks for logs that contain this failure reason.
+
+</br>
+
+<h3>Windows Brute Force Detection Rule:</h3>
+
+
 
