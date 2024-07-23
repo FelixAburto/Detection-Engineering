@@ -105,7 +105,7 @@ This project utilizes Elastic Security SIEM to ingest, monitor, and analyze data
 
 </br>
 
-- <b>Attack 3: Reverse Shell</b>
+- <b>Attack 3: Metasploit Reverse Shell & Elastic Defend</b>
 
 </br>
 
