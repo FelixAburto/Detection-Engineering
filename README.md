@@ -113,7 +113,7 @@ This project utilizes Elastic Security SIEM to ingest, monitor, and analyze data
 
 </br>
 
-- <b>Attack 4: Distributed Denial Of Service</b>
+- <b>Attack 4: Denial of Service & Distributed Denial Of Service</b>
 
 </br>
 
