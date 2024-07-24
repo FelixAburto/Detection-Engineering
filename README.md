@@ -187,5 +187,15 @@ After Elastic triggers the alert Elastic Defend will isolate our Windows VM from
 
 </br>
 
+<b>Release Windows VM From Isolation</b>
+
+To release our Windows VM from isolation head into Elastic Security and select the "Manage" option. Afterwards select "Endpoints" and find your Windows VM. On the right side of the Windows VM under "Actions" select the 3 dots and it should pull up a menu. From this menu select "Release Host" then click "Confirm". Wait until your Windows VM is release and verify that it is by pinging the Ubuntu VM that is on your internal network.
+
+<p align="center">
+<img src="https://i.imgur.com/kCLKdX1.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
+
+</br>
+
 <b>Metasploit Reverse Shell & Elastic Defend Complete!</b>
 
