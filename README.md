@@ -9,6 +9,20 @@
 
 <h2>Description</h2>
 
-This project utilizes Elastic Security SIEM to ingest, monitor, and analyze data from three distinct environments in order to develop effective threat detection rules. The objective is to demonstrate how to effectively detect various simulated cyber threats, enhancing overall security posture.
+In this section of the project we are going to create a detection for the Wannacry Ransomware. WannaCry is a ransomware attack that occurred in May 2017, targeting Windows computers. It spread through a vulnerability in the Windows SMB protocol, encrypting users' files and demanding a ransom in Bitcoin to decrypt them. The attack affected hundreds of thousands of computers globally, causing significant disruption in various sectors, including healthcare, finance, and telecommunications.
+
+</br>
+
+<h2>Wannacry Attack</h2>
+
+<h3>Attack Setup:</h2>
+
+
+
+
+
+
+
+
 
 
