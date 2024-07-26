@@ -162,3 +162,5 @@ Now that we have set our rule we can then detonate Wannacry once again and this 
 
 </br>
 
+<h3>Wannacry.exe Complete!</h3>
+
