@@ -110,7 +110,7 @@ data_stream.dataset : "windows.sysmon_operational" and registry.key : "S-1-5-21-
 
 
 <p align="center">
-<img src="https://imgur.com/Lg5XkV4" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+<img src="https://imgur.com/Lg5XkV4.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
 
 Now that we have our query we can move onto creating our detection rule
