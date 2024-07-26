@@ -156,7 +156,7 @@ Finally, we can set what action Elastic should take when this rule triggers. We 
 Now that we have set our rule we can then detonate Wannacry once again and this should trigger the alert. We can view the alert by going to "Security" and selecting the "Alerts" option. This is what the alert should look like:
 
 <p align="center">
-<img src="https://i.imgur.com/8Hm9GXc.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+<img src="https://imgur.com/w7H4Xfi.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
 
 
