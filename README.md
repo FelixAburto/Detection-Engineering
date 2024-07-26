@@ -121,7 +121,7 @@ This project utilizes Elastic Security SIEM to ingest, monitor, and analyze data
 
 </br>
 
-- <b>Attack 6: WannaCry.exe Ransomware</b> **[Attack 6 : WannaCry.exe Ransomware](https://github.com/FelixAburto/Detection-Engineering/tree/WannaCry.exe-Ransomware)**
+- **[Attack 6 : WannaCry.exe Ransomware](https://github.com/FelixAburto/Detection-Engineering/tree/WannaCry.exe-Ransomware)**
 
 </br>
 
