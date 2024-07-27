@@ -133,7 +133,7 @@ This project utilizes Elastic Security SIEM to ingest, monitor, and analyze data
 
 </br>
 
-- <b>Attack 8: Cross-Site Script (XSS) (Reflected, Stored, DOM)</b>
+- <b>Attack 8: Cross-Site Scripting (XSS) (Reflected, Stored, DOM)</b>
 
 </br>
 
