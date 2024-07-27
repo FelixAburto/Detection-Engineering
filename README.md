@@ -13,7 +13,11 @@ In the section of the project we are going to utilize the "Damn Vulnerable Web A
 
 <br />
 
-<h2>Damn Vulnerable Web Application</h2>
+<h2>Damn Vulnerable Web Application Setup</h2>
+
+<p align="center">
+<img src="https://appstore.edgenexus.io/wp-content/uploads/2018/03/dvwa-logo-500x500.png" height="25%" width="25%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
 
 <h3>Microsoft Azure Ubuntu VM:</h3>
 
@@ -51,7 +55,7 @@ I am personally going to use the Ubuntu WSL to setup our Damn Vulnerable Web App
 
 </br>
 
-<h3>Damn Vulnerable Web Application Setup:</h3>
+<h3>Web Application Setup:</h3>
 
 Now that we our VM setup we are now going to move forward to setup and configure the DVWA. The first thing we need to do is to install all of the necessary packages. To do this enter in this command into the terminal:
 
@@ -107,5 +111,112 @@ http://yourpublicip/DVWA/setup.php
 You should be able to see the setup page for the web application
 
 <p align="center">
-<img src="https://imgur.com/HpUK38O.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+<img src="https://imgur.com/nn4gkzZ.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
+
+
+<h3>Database Setup:</h3>
+
+The next step to setup our DVWA is to create the database for the web application. To do this first we need to start mariadb. To start mariadb enter in this command:
+
+```bash
+sudo service mariadb start
+```
+
+<p align="center">
+<img src="https://imgur.com/DFWVx1d.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
+
+
+Next execute this command to enter the database:
+
+```bash
+sudo mysql
+```
+Once you have done that enter in these series of commands to configure mariadb:
+
+```bash
+create database dvwa;
+
+create user dvwa@localhost identified by 'password';
+
+grant all on dvwa.* to dvwa@locahhost;
+
+flish privileges;
+
+```
+These series of SQL commands are used to set up a new database and user in MySQL or MariaDB. First, "create database dvwa;" creates a new database named dvwa. Next, "create user dvwa@localhost identified by 'password';" creates a new user named dvwa with the password password for local access. The command "grant all on dvwa.* to dvwa@localhost;" then grants all permissions on the dvwa database to this user. Finally, "flush privileges;" reloads the grant tables to ensure that the changes take effect immediately. 
+
+<p align="center">
+<img src="https://imgur.com/grOGXdj.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
+
+After that step we must configure the Database password in the config file. To do this navigate to "config" directory inside the "DVWA" directory. Once there enter in this command:
+
+```bash
+sudo nano config.inc.php
+```
+Look for the field "db_password' and make sure its set to 'password'. Once that is done save the file.
+
+<p align="center">
+<img src="https://imgur.com/DQHJVsP.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
+
+Verify that you can log into the database by entering in this command:
+
+```bash
+mysql -u dvwa -ppassword
+
+```
+<p align="center">
+<img src="https://imgur.com/QvALH9i.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
+
+
+Once you have verified that that you can log in return to the DVWA setup page and select the "Create/Reset Database" button. After you see the message "Setup successful" click on the "login" button and this will take you to the DVWA login page.
+
+<p align="center">
+<img src="https://imgur.com/DoPLZT7.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
+
+Login to DVWA using the username "DVWA" and the password "admin". We have now completed setting up the Damn Vulnerable Web Server and we are ready to setup our SQL injection attack.
+
+<p align="center">
+<img src="https://imgur.com/HeOqzze.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
+
+</br>
+
+<h2>SQL Injection Attack</h2>
+
+<h3>Attack Setup:</h3>
+
+<h3>Apache HTTP Server Integration</h3>
+
+The first thing we need to do to setup our SQL injection attack is to install the "Appache HTTP Server" Elastic Integration. To do this go to your Elastic environment and in the search box located on the top of the page search for "Appache HTTP Server" then select the option that comes up. Now that you are in the integration page click the "Add Apache HTTP Server"
+
+<p align="center">
+<img src="https://imgur.com/RhVmLJ4.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
+
+You should now be in the integration configuration page. Leave everything as default and scroll down to "Where to add this integration" and select "New Host" then enter in "Ubuntu Azure VM" in the "New agent policy name" field. Finally, click on the blue "Save and Continue" button and select the "Add Elastic Agent to your hosts" button.
+
+<p align="center">
+<img src="https://imgur.com/PuZwkAQ.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
+
+Follow the instructions to install the Elastic agent to your Ubuntu Azure VM.
+
+<p align="center">
+<img src="https://imgur.com/PSwG9hK.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
+
+Finally, login to the DVWA and select the option "DVWA Security" and set the security level to "Low". We are now ready to execute our SQL Injection.
+
+<p align="center">
+<img src="https://imgur.com/RP3YIFZ.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
+
+</br>
+
+<h3>Attack Execution:</h3>
