@@ -174,4 +174,5 @@ This project utilizes Elastic Security SIEM to ingest, monitor, and analyze data
 - <b>Azure Blob Storage</b>
 - <b>Azure Key Vault</b>
 - <b>Damn Vulnerable Web Application</b>
-
+- <b>MITRE ATT&CK Framework</b>
+- <b>Elastic Security SIEM</b>
