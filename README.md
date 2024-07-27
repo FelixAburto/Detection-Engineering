@@ -129,11 +129,11 @@ This project utilizes Elastic Security SIEM to ingest, monitor, and analyze data
 
 </br>
 
-- <b>Attack 7: SQL Injection</b>
+- **[Attack 7 : SQL Injection](https://github.com/FelixAburto/Detection-Engineering/tree/SQL-Injection)**
 
 </br>
 
-- <b>Attack 8: XSS (Reflected, Stored, DOM)</b>
+- <b>Attack 8: Cross-Site Script (XSS) (Reflected, Stored, DOM)</b>
 
 </br>
 
