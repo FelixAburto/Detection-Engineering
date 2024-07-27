@@ -65,11 +65,47 @@ This command updates the package list and installs Apache web server, MariaDB da
 <img src="https://imgur.com/XF9yKHp.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
 
-Next we are going to download DVMA to our Ubuntu server. To do this enter in the command:
+Next we are going to download DVMA to our Ubuntu server and move it to the html directory. To do this enter in these commands:
 
 ```bash
 git clone https://github.com/digininja/DVWA.git
+
+sudo mv DVMA/ /var/www/html/
+```
+<p align="center">
+<img src="https://imgur.com/DR9Wdjb.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
+
+The next step is to copy the config file into the DVWA config directory. To do this navigate to your DVWA directory and execute this command
+
+```bash
+
+cp config/config.inc.php.dist config/config.inc.php
+
 ```
 
+Now we need to configure our Ubuntu Azure VM to accept all inbound traffic from port 80. To do this go to your Ubuntu Azure VM and select the "Networking" option. Afterwards click on "Network Settings" and select the blue "Create port rule" button. Next in the new "Add inbound security rule" settings windows looks for the "Service" field and set it to "HTTP" then  set the "Priority" field to "200". Finally click the blue "Add" button to add the port rule.
 
 
+<p align="center">
+<img src="https://imgur.com/ZzrVWmy.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
+
+Next, we need to start up the web application. To do this enter in this command :
+
+```bash
+sudo service apache2 start
+```
+<p align="center">
+<img src="https://imgur.com/8Jke9Ol.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
+
+Finally, lets connect to our DVWA to verify that we can reach it. To do this open up a web browser and enter in this URL:
+
+http://yourpublicip/DVWA/setup.php
+
+You should be able to see the setup page for the web application
+
+<p align="center">
+<img src="https://imgur.com/HpUK38O.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
