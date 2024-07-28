@@ -103,5 +103,25 @@ To simulate this attack simply go to the file we uploaded in your storage contai
 
 <h3>Unauthorized Download of Azure Blob Storage Query:</h3>
 
+In order to create a query for this detection first we must think about what exactly are we looking for. For this detection we want to alert every time someone downloads this file from our storage container. We would want to look for the "ValuableData.txt" file and the "GetBlob" operation in our logs. After doing some research this is the query that we are going to use for our detection:
+
+```SQL
+
+data_stream.dataset : "azure.eventhub" and azure.eventhub.operationName : "GetBlob" and azure.eventhub.uri : *ValuableData.txt*
+
+```
+
+- data_stream.dataset : "azure.eventhub" this filters the data to only include logs/events from the Azure Event Hub dataset.
+- azure.eventhub.operationName : "GetBlob" this further filters the logs/events to those where the operation name is "GetBlob," which typically indicates an action involving fetching a blob (file) from Azure Storage.
+- azure.eventhub.uri : ValuableData.txt this filters the logs/events to include only those where the URI contains the string "ValuableData.txt," indicating that this specific file was involved in the operation.
+
+<p align="center">
+<img src="https://imgur.com/gQBDMj6.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
+
+Now that we have our query we are ready to create our detection rule.
+
+<h3>Unauthorized Download of Azure Blob Storage Detection Rule:</h3>
+
 
 
