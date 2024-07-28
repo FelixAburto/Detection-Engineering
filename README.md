@@ -141,7 +141,7 @@ This project utilizes Elastic Security SIEM to ingest, monitor, and analyze data
 
 </br>
 
-- <b>Attack 10: Unauthorized access to Azure Key Vault</b>
+- <b>Attack 10: Unauthorized Access to Azure Key Vault</b>
 
 </br>
 
