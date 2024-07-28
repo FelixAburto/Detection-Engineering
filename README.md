@@ -57,4 +57,51 @@ Next, we need to enable logging for our blob data. To do this go to your storage
 
 <h3>Azure Logs Elastic Integration:</h3>
 
+Now, that we have logging enabled we need to ingest those logs into our Elastic environment. To do this we are going to use the "Azure Logs" integration tool. First, go into your Elastic environment and search "Azure Logs" in the search box then click on the option that appears. Afterwards, click onthe blue "Add Azure Logs" button. 
+
+<p align="center">
+<img src="https://imgur.com/c4GWTLq.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
+
+We should now be on the "Azure Logs" configuration page. This is where we are going to enter the information needed to ingest our logs. First, enter in the Event Hub Name that we created. Now we need to enter in the "Connection String" for out Event Hub. A "Connection String" is a string of text that provides the necessary information for an application to connect to an Azure Event Hub. To do this go to your Even Hub and click on the "Settings" option then select the "Shared Access Policies" option. Afterwards, click of the "+ Add" option and enter in a name for this policy then make sure to checkmark the "Manage" option. Finally, save the policy and view the policy to find the "Connection string-primary key". Copy this key into the "Connection String" field in the Azure Logs integration tool.
+
+<p align="center">
+<img src="https://imgur.com/psLSaMO.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
+
+Next, we need to add the name of our storage account in the "Storage Account" field. Next, we need to enter in the "Storage Account Key". To do this go to your storage account in your azure tentant and look for the "Security + networking" option. Select that option then look for the "Key" field under the "Key1" section. Click on the blue "Show" button and copy the key. Paste the key in the "Storage Account Key" field in the integration tool. Afterwards, scroll to the "Collect events from Event Hub" section and click on the "Change defaults" option then make sure that the "Parse azure message" option is enabled. 
+
+<p align="center">
+<img src="https://imgur.com/WLUkp2U.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
+
+The last thing we need to do is to add this integration tool to our existing Azure VM host. To do this scrol down to "Where to add this integration" and select the "Existing Hosts" option then select our Ubuntu Azure VM as the "Agent Policy". Finally, select the "Save and continue" button and save the Azure Logs integration settings.
+
+<p align="center">
+<img src="https://imgur.com/4N0jRza.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
+
+We should know see Azure logs being ingested into our Elastic Evironment. We are now ready to simulate our attack
+
+<p align="center">
+<img src="https://imgur.com/TufyA12.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
+
+<h2>Unauthorized Download of Azure Blob Storage Attack</h2>
+
+<h3>Attack Execution:</h3>
+
+To simulate this attack simply go to the file we uploaded in your storage container and download the file.
+
+<p align="center">
+<img src="https://imgur.com/gLtv3eu.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+</p>
+
+</br>
+
+<h2>Unauthorized Download of Azure Blob Storage Detection</h2>
+
+<h3>Unauthorized Download of Azure Blob Storage Query:</h3>
+
+
 
