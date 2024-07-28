@@ -87,6 +87,8 @@ We should know see Azure logs being ingested into our Elastic Evironment. We are
 <img src="https://imgur.com/TufyA12.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
 
+</br>
+
 <h2>Unauthorized Download of Azure Blob Storage Attack</h2>
 
 <h3>Attack Execution:</h3>
