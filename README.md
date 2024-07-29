@@ -9,7 +9,7 @@
 
 <h2>Description</h2>
 
-In this section of the project we are going to similutate both a Denial of Service and a Distributed Denial of Service attack by flooding our Windows VM with network traffic. A Denial of Service (DOS) attack is a type of cyber attack aimed at making a computer, network, or service unavailable to its intended users. This is typically accomplished by overwhelming the target system with a flood of illegitimate requests, thereby exhausting its resources (such as bandwidth, CPU, or memory) and preventing legitimate requests from being processed. A Distributed Denial of Service (DDOS) attack is an enhanced version of a DOS attack. In a DDOS attack, multiple compromised systems (often part of a botnet) are used to launch the attack simultaneously against a single target.
+In this section of the project, we will simulate both a Denial of Service (DoS) and a Distributed Denial of Service (DDoS) attack by flooding our Windows VM with network traffic. A Denial of Service attack aims to make a computer, network, or service unavailable to its intended users. This is achieved by overwhelming the target system with a flood of illegitimate requests, exhausting its resources such as bandwidth, CPU, or memory, and preventing legitimate requests from being processed. On the other hand, a Distributed Denial of Service attack is a more severe form of a DoS attack. In a DDoS attack, multiple compromised systems, often forming a botnet, are used to simultaneously launch the attack against a single target, amplifying the scale and impact of the disruption.
 
 ***Note: This attack is resource intensive I would recommend keeping an eye on your resources to make sure that you do not strain your host machine***
 
@@ -19,7 +19,7 @@ In this section of the project we are going to similutate both a Denial of Servi
 
 <h3>DOS Attack Setup:</h3>
 
-The first thing we need to do to set up this attack is to create a simple http server with python. To do this enter in this command in a powershell terminal on your Windows VM:
+To set up this attack, the first step is to create a simple HTTP server using Python. To do this, open a PowerShell terminal on your Windows VM and enter the following command:
 
 ```powershell
 
@@ -36,7 +36,7 @@ Once that is done we are ready to launch our attack.
 
 <h3>DOS Attack Execution:</h3>
 
-To launch the DOS attack fire up the Kali Linux VM and open up a terminal. Enter in this command:
+To launch the DOS attack, start by opening a terminal on your Kali Linux VM. Enter the following command:
 
 ```Bash
 sudo hping3 -i u20 -S -p 8000 -c 50000 192.168.1.4
@@ -48,7 +48,7 @@ What this command will do is send 50,000 SYN packets to our https server on our 
 </p>
 
 
-Now that we have launched our attack we are going to move forwards and create the detection for this attack.
+Now that the attack is underway, we can proceed to create a detection rule for it.
 
 </br>
 
@@ -56,8 +56,12 @@ Now that we have launched our attack we are going to move forwards and create th
 
 <h3>DOS Query:</h3>
 
-To create our query for this DOS attack we need to look in our Elastic environment for 50,000 events that occured in a short amount of time. This is the query we will use that illustrates just that : data_stream.dataset : "zeek.connection" and zeek.connection.state : "RSTO" and zeek.connection.state_message : "Connection established, originator aborted (sent a RST)."
+To create our query for detecting the DOS attack, we need to identify a pattern where a large volume of events occurs within a short timeframe. In our Elastic environment, we'll focus on detecting such a pattern by looking for specific log events that indicate a denial of service.
 
+This is the query we will use that illustrates just that:
+```sql
+data_stream.dataset : "zeek.connection" and zeek.connection.state : "RSTO" and zeek.connection.state_message : "Connection established, originator aborted (sent a RST)."
+```
 <p align="center">
 <img src="https://i.imgur.com/Ka2QWtk.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
@@ -66,7 +70,7 @@ To create our query for this DOS attack we need to look in our Elastic environme
 -  zeek.connection.state : "RSTO" looks for logs that have RTSO as its zeek connection state
 -  zeek.connection.state_message : "Connection established, originator aborted (sent a RST)." looks for logs that has this message as its zeek connections state message
 
-Now that we have our query we are ready to create 
+Now that we have our query we are ready to create our detection rule.
 
 </br>
 
@@ -74,7 +78,7 @@ Now that we have our query we are ready to create
 
 <b>Define Rule:</b>
 
-Now that we have our query we are now going to create our detection rule. To do this copy the query and click on the hamburger icon on the top-left corner of the page. Scroll down to "Security" and select the "Rules" option. Afterwards click on "Detection Rules (SIEM)" and then select "Create New Rule". Make sure that the "Threshold" option is selected then scroll down and paste our query. Next under "Group by" enter in "source.ip" and "zeek.connection.state" and set the Threshold to >=30000. Then in the "Count" field set it to @timestamp and set the "Unique values" to >=10000. Afterwards scroll down to the "Suppress alerts by" option and select "Per time period" and select 5 minutes. What this will do is reduce the noise generated by repetitive alerts by grouping similar alerts together.
+To create our detection rule for a Denial of Service (DOS) attack, first copy the query and go to the rule creation section in Elastic. Click on the hamburger icon in the top-left corner, scroll down to "Security," and select "Rules." Then, click on "Detection Rules (SIEM)" and choose "Create New Rule." Ensure that the "Threshold" option is selected, scroll down, and paste the query. In the "Group by" field, enter "source.ip" and "zeek.connection.state," setting the "Threshold" to >= 30,000. In the "Count" field, use "@timestamp" and set the "Unique Values" to >= 10,000. Scroll down to the "Suppress alerts by" option, select "Per time period," and choose 5 minutes. This will group similar alerts together, reducing repetitive alert noise.
 
 <p align="center">
 <img src="https://i.imgur.com/GPpeSNc.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
@@ -83,7 +87,7 @@ Now that we have our query we are now going to create our detection rule. To do 
 
 <b>About Rule:</b>
 
-Next we are going to fill out the About Rule section. We are going to name the alert "DOS Attack Detected" and enter in a description for the rule. Set the "Default severity" to "High" then click on "Advance Settings". Scroll down to until you see "MITRE ATT&CK threats" and select the option for "Impact" for the technique and then add a subtechnique and set it to "Network Denial of Service". Finally add another subtechnique and set it to "Direct Network Flood".
+Next, we will complete the "About Rule" section. Name the alert "DOS Attack Detected" and provide a description for the rule. Set the "Default severity" to "High." Click on "Advanced Settings," scroll down to "MITRE ATT&CK threats," and select the "Impact" tactic. Then, add the technique "Network Denial of Service," and finally, add a subtechnique set to "Direct Network Flood."
 
 <p align="center">
 <img src="https://i.imgur.com/gdcNCNG.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
@@ -92,7 +96,7 @@ Next we are going to fill out the About Rule section. We are going to name the a
 
 <b>Schedule Rule:</b>
 
-Afterward, we will set the duration for how long the rule should run. We will set the rule to run every 5 minutes with a look-back time of 5 minutes. You can adjust this however you'd like.
+Afterwards, we will configure the duration for the rule. Set the rule to run every 5 minutes with a look-back time of 5 minutes. Feel free to adjust these settings according to your needs.
 
 <p align="center">
 <img src="https://i.imgur.com/pdRFGaf.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
@@ -100,7 +104,7 @@ Afterward, we will set the duration for how long the rule should run. We will se
 
 <b>Rule Actions:</b>
 
-Finally, we can set what action Elastic should take when this rule triggers. We can set it to send an email, send a message with slack, use microsoft teams etc. For this project we dont have to set it to anything simply click on the "Create & Enable rule" button.
+Finally, we can determine the actions Elastic should take when this rule triggers. Options include sending an email, posting a message to Slack, or using Microsoft Teams, among others. For this project, we don’t need to configure any specific actions—just click on the "Create & Enable Rule" button to finalize and activate the rule.
 
 <p align="center">
 <img src="https://i.imgur.com/8Hm9GXc.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
@@ -108,7 +112,7 @@ Finally, we can set what action Elastic should take when this rule triggers. We 
 
 <b>Results:</b>
 
-Now that we have set our rule we can then run hping3 command and this should trigger the alert. We can view the alert by going to "Security" and selecting the "Alerts" option.
+Now that we have set up our rule, we can run the hping3 command to trigger the alert. To view the alert, go to "Security" and select the "Alerts" option in your Elastic environment.
 
 </br>
 
@@ -116,7 +120,7 @@ Now that we have set our rule we can then run hping3 command and this should tri
 
 <h3>DDOS Attack Setup:</h3>
 
-The first thing we need to do to set up this attack is to create a simple http server with python. To do this enter in this command in a powershell terminal on your Windows VM:
+To set up this attack, the first step is to create a simple HTTP server using Python. To do this, open a PowerShell terminal on your Windows VM and enter the following command:
 
 ```powershell
 
@@ -129,14 +133,14 @@ Once that is done we are ready to launch our attack.
 
 <h3>DDOS Attack Execution:</h3>
 
-To execute the attack we need to fire up both our Parrot OS VM and Kali Linux VM. Open up a terminal in both VMs and execute this command:
+To execute the attack, fire up both your Parrot OS VM and Kali Linux VM. Open a terminal in each VM and execute the following command:
 
 ```Bash
 
 sudo hping3 -i u20 -S -p 8000 192.168.1.4
 
 ```
-This command will send a Syn Flood attack indefinetly until it is stopped with "Ctrl+C". Let it run for a few seconds and stop the attack.
+This command will send a SYN flood attack indefinitely until stopped with "Ctrl+C". Allow it to run for a few seconds, then stop the attack by pressing "Ctrl+C".
 
 <p align="center">
 <img src="https://i.imgur.com/tsrPH7A.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
@@ -151,7 +155,7 @@ We are now ready to create our detection for the DDOS attack.
 
 <h3>DDOS Query</h3>
 
-In the past to create our queries we used the query language "Kibana Query Language" however in this instance where we are going to need detect DOS attacks from more this one source we won't be able to use KQL to create our query. Fortunately, Elastic has another query language we can use called ES|QL or "ElasticSearch Query Language". The difference between the two is that Kibana Query Language (KQL) is a user-friendly, human-readable syntax designed for quick, ad-hoc searching and filtering within Kibana. It is easy to learn and use, making it ideal for basic queries in Kibana's Discover, Dashboard, and Visualizations sections. On the other hand, Elasticsearch Query Language (ES|QL) offers a more advanced, SQL-like syntax suited for complex querying and data analysis directly within Elasticsearch.
+In previous instances, we used Kibana Query Language (KQL) to create our queries. However, for detecting Denial of Service (DOS) attacks from multiple sources, KQL may not be sufficient. Fortunately, Elasticsearch offers another query language called ES|QL, or Elasticsearch Query Language. Unlike KQL, which is user-friendly and designed for basic, ad-hoc searches within Kibana's Discover, Dashboard, and Visualizations sections, ES|QL provides a more advanced, SQL-like syntax. This makes ES|QL better suited for complex querying and data analysis directly within Elasticsearch.
 
 The query that we are going to use to detect a DDOS attack is :
 
@@ -170,7 +174,7 @@ This query looks through logs that match the pattern logs-* and filters them to 
 <img src="https://i.imgur.com/fgSF9pw.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
 
-Now that we have our ESQL query we are now ready to create our detection rule.
+Now that we have our ES|QL query we are now ready to create our detection rule.
 
 </br>
 
@@ -178,7 +182,7 @@ Now that we have our ESQL query we are now ready to create our detection rule.
 
 <b>Define Rule:</b>
 
-Now that we have our query we are now going to create our detection rule. To do this copy the query and click on the hamburger icon on the top-left corner of the page. Scroll down to "Security" and select the "Rules" option. Afterwards click on "Detection Rules (SIEM)" and then select "Create New Rule". Make sure that the "ES|QL" option is selected then scroll down and paste our query.
+Now that we have our query, we can proceed to create our detection rule. To start, copy the query and click on the hamburger icon in the top-left corner of the page. Scroll down to "Security" and select the "Rules" option. Next, click on "Detection Rules (SIEM)" and then choose "Create New Rule". Ensure that the "ES|QL" option is selected, then scroll down and paste the query into the designated field.
 
 <p align="center">
 <img src="https://i.imgur.com/DTIQG7k.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
@@ -186,7 +190,7 @@ Now that we have our query we are now going to create our detection rule. To do 
 
 <b>About Rule:</b>
 
-Next we are going to fill out the About Rule section. We are going to name the alert "A DDOS Attack Detected" and enter in a description for the rule. Set the "Default severity" to "Critical" then click on "Advance Settings". Scroll down to until you see "MITRE ATT&CK threats" and select the option for "Impact" for the technique and then add a subtechnique and set it to "Network Denial of Service". Finally add another subtechnique and set it to "Direct Network Flood".
+Next, we need to complete the "About Rule" section. Name the alert "A DDOS Attack Detected" and provide a description for the rule. Set the "Default severity" to "Critical" and then click on "Advanced Settings." Scroll down until you see "MITRE ATT&CK threats," select "Impact" as the tactic, and add the technique "Network Denial of Service." Finally, add a subtechnique and set it to "Direct Network Flood."
 
 <p align="center">
 <img src="https://i.imgur.com/TUoFIco.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
@@ -195,7 +199,7 @@ Next we are going to fill out the About Rule section. We are going to name the a
 
 <b>Schedule Rule:</b>
 
-Afterward, we will set the duration for how long the rule should run. We will set the rule to run every 5 minutes with a look-back time of 5 minutes. You can adjust this however you'd like.
+Afterward, set the rule’s duration. Configure it to run every 5 minutes with a look-back time of 5 minutes. Feel free to adjust these settings according to your needs.
 
 <p align="center">
 <img src="https://i.imgur.com/pdRFGaf.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
@@ -203,7 +207,7 @@ Afterward, we will set the duration for how long the rule should run. We will se
 
 <b>Rule Actions:</b>
 
-Finally, we can set what action Elastic should take when this rule triggers. We can set it to send an email, send a message with slack, use microsoft teams etc. For this project we dont have to set it to anything simply click on the "Create & Enable rule" button.
+Finally, configure the action that Elastic should take when the rule triggers. Options include sending an email, a Slack message, or using Microsoft Teams, among others. For this project, you can skip configuring these actions and simply click the "Create & Enable Rule" button.
 
 <p align="center">
 <img src="https://i.imgur.com/8Hm9GXc.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
@@ -211,7 +215,7 @@ Finally, we can set what action Elastic should take when this rule triggers. We 
 
 <b>Results:</b>
 
-Now that we have set our rule we can then run another DDOS attack and this should trigger the alert. We can view the alert by going to "Security" and selecting the "Alerts" option. Let the attack run for about 30 seconds and wait for the alerts to pop up. This is what it should look like when the alerts come through.
+Now that our rule is configured, run another DDoS attack to trigger the alert. Monitor the attack for about 30 seconds, and then check the alerts by navigating to "Security" and selecting the "Alerts" option. The alerts should appear as expected, indicating that the rule has successfully detected the attack.
 
 <p align="center">
 <img src="https://i.imgur.com/15a1VNB.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
