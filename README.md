@@ -166,3 +166,12 @@ This project employs Elastic Security SIEM to ingest, monitor, and analyze data 
 - <b>MITRE ATT&CK Framework</b>
 - <b>Elastic Security SIEM</b>
 - <b>Elastic Defender</b>
+
+</br>
+
+<h2>Sources for Logos, Icons, and Images</h2>
+
+- **[Sources](https://github.com/FelixAburto/Detection-Engineering/tree/Sources-for-photos%2C-logos%2C-and-icons)**
+
+[^1]: I do not own any logos, icons, or images in this project except for my own screenshots that are posted on my imgur profile.
+
