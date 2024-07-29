@@ -65,28 +65,26 @@ This project employs Elastic Security SIEM to ingest, monitor, and analyze data 
 
 </br>
 
-- **[Elastic Cloud & Oracle VirtualBox](https://github.com/FelixAburto/Detection-Engineering/tree/Elastic-and-Oracle-Virtualbox)**
+- **[Elastic Cloud & Oracle VirtualBox](https://github.com/FelixAburto/Detection-Engineering/tree/Elastic-and-Oracle-Virtualbox)** &nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/pqCZFrQ.png" alt="Icon" style="width: 10%; height: auto; vertical-align: middle;"/>
 
 </br>
 
-- **[Windows 11 VM Setup](https://github.com/FelixAburto/Detection-Engineering/tree/Windows-VM-Setup)**
+- **[Windows 11 VM Setup](https://github.com/FelixAburto/Detection-Engineering/tree/Windows-VM-Setup)** &nbsp;&nbsp;&nbsp;<img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Windows_11_logo.svg" alt="Icon" style="width: 10%; height: auto; vertical-align: middle;"/>
 
 
-</br>
-
-- **[Ubuntu Linux VM (Zeek/Bro) Setup](https://github.com/FelixAburto/Detection-Engineering/tree/Ubuntu-(Zeek/Bro)-VM-Setup)**
+- **[Ubuntu Linux VM (Zeek/Bro) Setup](https://github.com/FelixAburto/Detection-Engineering/tree/Ubuntu-(Zeek/Bro)-VM-Setup)** &nbsp;&nbsp;&nbsp;<img src="https://cdn.freebiesupply.com/logos/large/2x/ubuntu-4-logo-png-transparent.png" alt="Icon" style="width: 4%; height: auto; vertical-align: middle;"/> &nbsp;&nbsp;&nbsp;<img src="https://zeek.org/wp-content/uploads/2020/04/zeek-logo-without-text.png" alt="Icon" style="width: 4%; height: auto; vertical-align: middle;"/>
 
 </br>
 
-- **[Parrot OS VM Setup](https://github.com/FelixAburto/Detection-Engineering/tree/Parrot-OS-VM-Setup)**
+- **[Parrot OS VM Setup](https://github.com/FelixAburto/Detection-Engineering/tree/Parrot-OS-VM-Setup)** &nbsp;&nbsp;&nbsp;<img src="https://gdm-catalog-fmapi-prod.imgix.net/ProductLogo/b91dba39-aef6-4808-be11-8eda81f81f56.png" alt="Icon" style="width: 4%; height: auto; vertical-align: middle;"/>
 
 </br>
 
-- **[Kali Linux VM Setup](https://github.com/FelixAburto/Detection-Engineering/tree/Kali-Linux-VM-Setup)**
+- **[Kali Linux VM Setup](https://github.com/FelixAburto/Detection-Engineering/tree/Kali-Linux-VM-Setup)** &nbsp;&nbsp;&nbsp;<img src="https://seeklogo.com/images/K/kali-linux-logo-AED181186E-seeklogo.com.png" alt="Icon" style="width: 4%; height: auto; vertical-align: middle;"/>
 
 </br>
 
-- **[Microsoft Azure Setup](https://github.com/FelixAburto/Detection-Engineering/tree/Microsoft-Azure-Setup)**
+- **[Microsoft Azure Setup](https://github.com/FelixAburto/Detection-Engineering/tree/Microsoft-Azure-Setup)** &nbsp;&nbsp;&nbsp;<img src="https://swimburger.net/media/ppnn3pcl/azure.png" alt="Icon" style="width: 4%; height: auto; vertical-align: middle;"/>
 
 </br>
 
@@ -97,15 +95,15 @@ This project employs Elastic Security SIEM to ingest, monitor, and analyze data 
 
 </br>
 
-- **[Attack 1 : Port Enumeration and Web Scanning (Start Here!) ](https://github.com/FelixAburto/Detection-Engineering/tree/Port-Enumeration-and-Web-Scanning)**
+- **[Attack 1 : Port Enumeration and Web Scanning (Start Here!) ](https://github.com/FelixAburto/Detection-Engineering/tree/Port-Enumeration-and-Web-Scanning)** &nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/h2Ioyda.png" alt="Icon" style="width: 5%; height: auto; vertical-align: middle;"/>
 
 </br>
 
-- **[Attack 2 : Windows & Linux Brute Force Attack ](https://github.com/FelixAburto/Detection-Engineering/tree/Windows-and-Linux-Brute-Force-Attack)**
+- **[Attack 2 : Windows & Linux Brute Force Attack ](https://github.com/FelixAburto/Detection-Engineering/tree/Windows-and-Linux-Brute-Force-Attack)** &nbsp;&nbsp;&nbsp;<img src="https://cdn-icons-png.flaticon.com/512/6689/6689968.png" alt="Icon" style="width: 5%; height: auto; vertical-align: middle;"/>
 
-</br>
 
-- **[Attack 3 : Metasploit Reverse Shell & Elastic Defend ](https://github.com/FelixAburto/Detection-Engineering/tree/Reverse-Shell)**
+- **[Attack 3 : Metasploit Reverse Shell & Elastic Defend ](https://github.com/FelixAburto/Detection-Engineering/tree/Reverse-Shell)** &nbsp;&nbsp;&nbsp;<img src="https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/v1469039917/hodwdopd059vkn2k1b5a.png" alt="Icon" style="width: 15%; height: auto; vertical-align: middle;"/>
+
 
 </br>
 
@@ -113,15 +111,15 @@ This project employs Elastic Security SIEM to ingest, monitor, and analyze data 
 
 </br>
 
-- **[Attack 4 : Denial of Service & Distributed Denial of Service](https://github.com/FelixAburto/Detection-Engineering/tree/Denial-of-Service-%26-Distributed-Denial-Of-Service)**
+- **[Attack 4 : Denial of Service & Distributed Denial of Service](https://github.com/FelixAburto/Detection-Engineering/tree/Denial-of-Service-%26-Distributed-Denial-Of-Service)** &nbsp;&nbsp;&nbsp;<img src="https://cdn-icons-png.flaticon.com/512/4046/4046203.png" alt="Icon" style="width: 5%; height: auto; vertical-align: middle;"/>
 
 </br>
 
-- **[Attack 5 : Pass the Hash](https://github.com/FelixAburto/Detection-Engineering/tree/Pass-The-Hash)**
+- **[Attack 5 : Pass the Hash](https://github.com/FelixAburto/Detection-Engineering/tree/Pass-The-Hash)** &nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/u80FCmz.png" alt="Icon" style="width: 10%; height: auto; vertical-align: middle;"/>
 
 </br>
 
-- **[Attack 6 : WannaCry.exe Ransomware](https://github.com/FelixAburto/Detection-Engineering/tree/WannaCry.exe-Ransomware)**
+- **[Attack 6 : WannaCry.exe Ransomware](https://github.com/FelixAburto/Detection-Engineering/tree/WannaCry.exe-Ransomware)** &nbsp;&nbsp;&nbsp;<img src="https://imgur.com/i8NmRpT.png" alt="Icon" style="width: 10%; height: auto; vertical-align: middle;"/>
 
 </br>
 
@@ -129,27 +127,23 @@ This project employs Elastic Security SIEM to ingest, monitor, and analyze data 
 
 </br>
 
-- **[Attack 7 : SQL Injection](https://github.com/FelixAburto/Detection-Engineering/tree/SQL-Injection)**
+- **[Attack 7 : SQL Injection](https://github.com/FelixAburto/Detection-Engineering/tree/SQL-Injection)** &nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/fwcBcXu.png" alt="Icon" style="width: 5%; height: auto; vertical-align: middle;"/>
+
+- **[Attack 8 : Cross-Site Scripting (XSS) (Reflected, Stored, DOM)](https://github.com/FelixAburto/Detection-Engineering/tree/Cross-Site-Script-(XSS)-(Reflected%2C-Stored%2C-DOM))** &nbsp;&nbsp;&nbsp;<img src="https://imgur.com/4xFoKLV.png" alt="Icon" style="width: 5%; height: auto; vertical-align: middle;"/>
 
 </br>
 
-- **[Attack 8 : Cross-Site Scripting (XSS) (Reflected, Stored, DOM)](https://github.com/FelixAburto/Detection-Engineering/tree/Cross-Site-Script-(XSS)-(Reflected%2C-Stored%2C-DOM))**
+- **[Attack 9 : Unauthorized Download of Azure Blob Storage](https://github.com/FelixAburto/Detection-Engineering/tree/Unauthorized-Download-of-Azure-Blob-Storage)** &nbsp;&nbsp;&nbsp;<img src="https://img.icons8.com/?size=512&id=84280&format=png" alt="Icon" style="width: 7%; height: auto; vertical-align: middle;"/>
 
 </br>
 
-- **[Attack 9 : Unauthorized Download of Azure Blob Storage](https://github.com/FelixAburto/Detection-Engineering/tree/Unauthorized-Download-of-Azure-Blob-Storage)**
-
-</br>
-
-- **[Attack 10 : Unauthorized Access to Azure Key Vault](https://github.com/FelixAburto/Detection-Engineering/tree/Unauthorized-Access-to-Azure-Key-Vault)**
+- **[Attack 10 : Unauthorized Access to Azure Key Vault](https://github.com/FelixAburto/Detection-Engineering/tree/Unauthorized-Access-to-Azure-Key-Vault)** &nbsp;&nbsp;&nbsp;<img src="https://miro.medium.com/v2/resize:fit:600/1*b0oZ-Da1LxW4TdujAOiC9Q.png" alt="Icon" style="width: 10%; height: auto; vertical-align: middle;"/>
 
 </br>
 
 <h3>BONUS:</h3>
 
-</br>
-
-- **[Showcase of Man in the Middle Attack](https://github.com/FelixAburto/Detection-Engineering/tree/Showcase-Of-Man-in-the-Middle-Attack)**
+- **[Showcase of Man in the Middle Attack](https://github.com/FelixAburto/Detection-Engineering/tree/Showcase-Of-Man-in-the-Middle-Attack)** &nbsp;&nbsp;&nbsp;<img src="https://blogs.vmware.com/euc/files/2018/10/roxane_sanusersroxanedownloadsmitm-png.png" alt="Icon" style="width: 15%; height: auto; vertical-align: middle;"/>
 
 </br>
 
