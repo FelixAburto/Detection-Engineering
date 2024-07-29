@@ -66,7 +66,7 @@ We are now ready to execute the attack.
 
 <h3>Attack Execution</h3>
 
-o launch this attack, we will execute a .bat script named "Reverse Shell.bat" on our Windows 11 VM. First, on our Parrot OS VM, enter the command run inside the Metasploit console to start the multi-handler listening for the payload. Next, on our Windows 11 VM, execute the .bat file and wait until the reverse shell has spawned. Once the reverse shell is established, navigate to the directory containing the "Valuable Company Data - DO NOT HAXXX.txt" file.
+o launch this attack, we will execute a .bat script named "Reverse Shell.bat" on our Windows 11 VM. First, on our Parrot OS VM, enter the command `run` inside the Metasploit console to start the multi-handler listening for the payload. Next, on our Windows 11 VM, execute the .bat file and wait until the reverse shell has spawned. Once the reverse shell is established, navigate to the directory containing the "Valuable Company Data - DO NOT HAXXX.txt" file.
 
 <p align="center">
 <img src="https://i.imgur.com/dlMLo38.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
