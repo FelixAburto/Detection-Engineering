@@ -53,4 +53,6 @@ The first step in setting up our environment is to install Oracle VirtualBox, th
 4. Follow the on-screen instructions to complete the installation.
 5. After the installation is finished, launch the VirtualBox application.
 
+Now that we have Oracle Virtualbox installed we will move on to creating our virtual machines.
+
 
