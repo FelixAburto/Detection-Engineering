@@ -93,8 +93,6 @@ This project employs Elastic Security SIEM to ingest, monitor, and analyze data 
 
 <h3>10.0.0.0/24 Environment:</h3>
 
-</br>
-
 - **[Attack 1 : Port Enumeration and Web Scanning (Start Here!) ](https://github.com/FelixAburto/Detection-Engineering/tree/Port-Enumeration-and-Web-Scanning)** &nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/h2Ioyda.png" alt="Icon" style="width: 5%; height: auto; vertical-align: middle;"/>
 
 </br>
@@ -110,8 +108,6 @@ This project employs Elastic Security SIEM to ingest, monitor, and analyze data 
 
 <h3>192.168.1.0/24 Environment:</h3>
 
-</br>
-
 - **[Attack 4 : Denial of Service & Distributed Denial of Service](https://github.com/FelixAburto/Detection-Engineering/tree/Denial-of-Service-%26-Distributed-Denial-Of-Service)** &nbsp;&nbsp;&nbsp;<img src="https://cdn-icons-png.flaticon.com/512/4046/4046203.png" alt="Icon" style="width: 5%; height: auto; vertical-align: middle;"/>
 
 
@@ -123,8 +119,6 @@ This project employs Elastic Security SIEM to ingest, monitor, and analyze data 
 </br>
 
 <h3>Microsoft Azure Environment:</h3>
-
-</br>
 
 - **[Attack 7 : SQL Injection](https://github.com/FelixAburto/Detection-Engineering/tree/SQL-Injection)** &nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/fwcBcXu.png" alt="Icon" style="width: 5%; height: auto; vertical-align: middle;"/>
 
