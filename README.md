@@ -99,7 +99,7 @@ Next, we will complete the "About Rule" section. Name the alert "DOS Attack Dete
 Afterwards, we will configure the duration for the rule. Set the rule to run every 5 minutes with a look-back time of 5 minutes. Feel free to adjust these settings according to your needs.
 
 <p align="center">
-<img src="https://i.imgur.com/pdRFGaf.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+<img src="https://imgur.com/bZM4ADq.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
 
 <b>Rule Actions:</b>
@@ -107,7 +107,7 @@ Afterwards, we will configure the duration for the rule. Set the rule to run eve
 Finally, we can determine the actions Elastic should take when this rule triggers. Options include sending an email, posting a message to Slack, or using Microsoft Teams, among others. For this project, we don’t need to configure any specific actions—just click on the "Create & Enable Rule" button to finalize and activate the rule.
 
 <p align="center">
-<img src="https://i.imgur.com/8Hm9GXc.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+<img src="https://imgur.com/4Sd0G0p.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
 
 <b>Results:</b>
@@ -202,7 +202,7 @@ Next, we need to complete the "About Rule" section. Name the alert "A DDOS Attac
 Afterward, set the rule’s duration. Configure it to run every 5 minutes with a look-back time of 5 minutes. Feel free to adjust these settings according to your needs.
 
 <p align="center">
-<img src="https://i.imgur.com/pdRFGaf.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+<img src="https://imgur.com/bZM4ADq.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
 
 <b>Rule Actions:</b>
@@ -210,7 +210,7 @@ Afterward, set the rule’s duration. Configure it to run every 5 minutes with a
 Finally, configure the action that Elastic should take when the rule triggers. Options include sending an email, a Slack message, or using Microsoft Teams, among others. For this project, you can skip configuring these actions and simply click the "Create & Enable Rule" button.
 
 <p align="center">
-<img src="https://i.imgur.com/8Hm9GXc.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+<img src="https://imgur.com/4Sd0G0p.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
 
 <b>Results:</b>
