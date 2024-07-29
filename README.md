@@ -336,7 +336,7 @@ Next, we will fill out the About Rule section. Name the alert "A Pass the Hash A
 
 
 <p align="center">
-<img src="https://i.imgur.com/8p6HCHV.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+<img src="https://imgur.com/hofyy98.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 <img src="https://imgur.com/TTQW0XI.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
 
