@@ -117,7 +117,6 @@ This project employs Elastic Security SIEM to ingest, monitor, and analyze data 
 
 - **[Attack 5 : Pass the Hash](https://github.com/FelixAburto/Detection-Engineering/tree/Pass-The-Hash)** &nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/u80FCmz.png" alt="Icon" style="width: 10%; height: auto; vertical-align: middle;"/>
 
-</br>
 
 - **[Attack 6 : WannaCry.exe Ransomware](https://github.com/FelixAburto/Detection-Engineering/tree/WannaCry.exe-Ransomware)** &nbsp;&nbsp;&nbsp;<img src="https://imgur.com/i8NmRpT.png" alt="Icon" style="width: 10%; height: auto; vertical-align: middle;"/>
 
@@ -131,11 +130,7 @@ This project employs Elastic Security SIEM to ingest, monitor, and analyze data 
 
 - **[Attack 8 : Cross-Site Scripting (XSS) (Reflected, Stored, DOM)](https://github.com/FelixAburto/Detection-Engineering/tree/Cross-Site-Script-(XSS)-(Reflected%2C-Stored%2C-DOM))** &nbsp;&nbsp;&nbsp;<img src="https://imgur.com/4xFoKLV.png" alt="Icon" style="width: 5%; height: auto; vertical-align: middle;"/>
 
-</br>
-
 - **[Attack 9 : Unauthorized Download of Azure Blob Storage](https://github.com/FelixAburto/Detection-Engineering/tree/Unauthorized-Download-of-Azure-Blob-Storage)** &nbsp;&nbsp;&nbsp;<img src="https://img.icons8.com/?size=512&id=84280&format=png" alt="Icon" style="width: 7%; height: auto; vertical-align: middle;"/>
-
-</br>
 
 - **[Attack 10 : Unauthorized Access to Azure Key Vault](https://github.com/FelixAburto/Detection-Engineering/tree/Unauthorized-Access-to-Azure-Key-Vault)** &nbsp;&nbsp;&nbsp;<img src="https://miro.medium.com/v2/resize:fit:600/1*b0oZ-Da1LxW4TdujAOiC9Q.png" alt="Icon" style="width: 10%; height: auto; vertical-align: middle;"/>
 
@@ -170,3 +165,4 @@ This project employs Elastic Security SIEM to ingest, monitor, and analyze data 
 - <b>Damn Vulnerable Web Application</b>
 - <b>MITRE ATT&CK Framework</b>
 - <b>Elastic Security SIEM</b>
+- <b>Elastic Defender</b>
