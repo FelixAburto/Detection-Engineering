@@ -6,7 +6,7 @@
 
 <h3>Parrot OS Download</h3>
 
-To download Parrot OS vist https://parrotsec.org/ and click on the blue download button. In the next page click on the "Virtual" option and after that click the "Security" Option. Afterwards select the "AMD64" option and it will take you to the download page. Finally click on "download" and "Virtualbox" to start the download.
+To download Parrot OS, visit https://parrotsec.org/ and click on the blue "Download" button. On the next page, click on the "Virtual" option, then select the "Security" option. After that, choose the "AMD64" option to go to the download page. Finally, click on "Download" and select "VirtualBox" to start the download.
 
 <p align="center">
 <img src="https://i.imgur.com/tlsSRCo.png" height="100%" width="100%" alt="Win 11 Hardware"/>
@@ -17,7 +17,7 @@ To download Parrot OS vist https://parrotsec.org/ and click on the blue download
 
 <h3>Parrot OS Installation</h3>
 
-To install Parrot OS simply double click on the .OVA file that was download and it will bring up Virtualbox with all the settings already populated. Leave everything as default and click "finish" then wait for the VM to be imported and your done!
+To install Parrot OS, simply double-click on the .OVA file that was downloaded. This will open VirtualBox with all the settings already populated. Leave everything at its default settings and click "Finish." Wait for the VM to be imported, and you're done!
 
 <p align="center">
 <img src="https://i.imgur.com/mrevUmM.gif" height="100%" width="100%" alt="Win 11 Hardware"/>
@@ -27,7 +27,7 @@ To install Parrot OS simply double click on the .OVA file that was download and 
 
 <h3>Parrot OS Configuration</h3>
 
-To configure Parrot OS for this project right click on your virtual machine and select "Settings" then click on the "Network" option. Afterwards click on  the "Adapter 2" option and check the "Enable Network Adapter". In the "Attached to" drop down menu select "Internal Network" and select the name of your internal network. Under "Advance settings" go to the "Promiscuous Mode" option and select "Allow All".
+To configure Parrot OS for this project, right-click on your virtual machine and select "Settings." Then, click on the "Network" option. Next, click on "Adapter 2" and check the "Enable Network Adapter" box. In the "Attached to" drop-down menu, select "Internal Network" and choose the name of your internal network. Under "Advanced" settings, go to the "Promiscuous Mode" option and select "Allow All."
 
 <p align="center">
 <img src="https://i.imgur.com/HyvAcBm.png" height="100%" width="100%" alt="Win 11 Hardware"/>
@@ -35,7 +35,7 @@ To configure Parrot OS for this project right click on your virtual machine and 
 
 </br>
 
-Next start up the Parrot OS VM and click on the "menu" option on the bottom left then search for "Advance Network Configuration". Afterwards select "Wired Connection 2" and go to the "IPv4 Settings" section. There add the ip address 10.0.0.5 and set the subnet mask as "24".
+Next, start up the Parrot OS VM and click on the "Menu" option in the bottom-left corner. Search for "Advanced Network Configuration," then select "Wired Connection 2" and go to the "IPv4 Settings" section. Add the IP address `10.0.0.5` and set the subnet mask to `24`
 
 ***Note: for the 192.168.1.0 environment simply replace 10.0.0.5 with 192.168.1.5***
 
