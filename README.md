@@ -9,13 +9,13 @@
 
 <h2>Description</h2>
 
-In this section of the project we are going to be creating a detection for unauthorized access to a "Secret Value" in our Azure Key Vault. Azure Key Vault is a cloud service provided by Microsoft Azure for securely storing and managing sensitive information, such as secrets, keys, and certificates.
+In this section of the project, we will create a detection for unauthorized access to a "Secret Value" in our Azure Key Vault. Azure Key Vault is a cloud service provided by Microsoft Azure for securely storing and managing sensitive information, such as secrets, keys, and certificates.
 
 <h2>Unauthorized Access to Azure Key Vault Setup</h2>
 
 <h3>Creating an Event Hub for our Key Vault Logs:</h3>
 
-The first thing we need to do is to create an Event Hub to stream our Azure Key Vault logs. To do this go to your Event Hub Namespace and click on the "+ Event Hub" option. This will take you to the "Create Event Hub" configuration page. Enter in a name for this eventhub and set the "Retention time" to 24 hours. Finally, click the "Review + create" button and wait for the validation to pass then click on "create".
+The first step is to create an Event Hub to stream our Azure Key Vault logs. To do this, navigate to your Event Hub Namespace and click on the "+ Event Hub" option. This will take you to the "Create Event Hub" configuration page. Enter a name for the event hub and set the "Retention time" to 24 hours. Finally, click the "Review + create" button, wait for the validation to pass, and then click on "Create."
 
 ***Note: If you do not have an Event Hub Namespace set up go to the "Unauthorized Access to Azure Blob Storage" section of the project and follow the instructions on how to do that.***
 
@@ -26,7 +26,7 @@ The first thing we need to do is to create an Event Hub to stream our Azure Key 
 
 <h3>Creating an Azure Key Vault:</h3>
 
-The next step is to create an Azure Key Vault. To do this go to your Azure tenant and search up "Key Vaults" and select the option that appears. Afterwards, click on the blue "Create key vault" button and this should take you to the "Create a key vault" configuration page. Set the "Resource Group" field to the resource group we created then enter a name for this key vault. Next, click on "Review and Create" and wait for the validation to pass then select "Create". Finally, wait for the key vault to be deployed and view your key vault.
+The next step is to create an Azure Key Vault. To do this, go to your Azure tenant and search for "Key Vaults," then select the option that appears. Click on the blue "Create key vault" button, which will take you to the "Create a key vault" configuration page. Set the "Resource Group" field to the resource group we created and enter a name for the key vault. Click on "Review and Create," wait for the validation to pass, and then select "Create." Finally, wait for the key vault to be deployed and view it.
 
 <p align="center">
 <img src="https://imgur.com/87Gxfao.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
@@ -34,7 +34,7 @@ The next step is to create an Azure Key Vault. To do this go to your Azure tenan
 
 <h3>Add "Key Vault Administrator" Role:</h3>
 
-Next, we need to add the "Key Vault Administrator" role to our user. To do this visit your key vault and click the "Access control (IAM)" option. Afterwards, click on the "+ Add" option then select "Add role assignment". This should take you to the "Add role assignment" configuration page. Search for the "Key Vault Administrator" role and select it then click "Next". Afterwards click the "+ Select Members" option and select your user account. Finally, click on "Review and assign" and this should assign the role to your account.
+Next, we need to assign the "Key Vault Administrator" role to your user. To do this, navigate to your key vault and click on the "Access control (IAM)" option. Then, click on the "+ Add" button and select "Add role assignment." This will take you to the "Add role assignment" configuration page. Search for and select the "Key Vault Administrator" role, then click "Next." Next, click the "+ Select Members" button and choose your user account. Finally, click on "Review and assign" to complete the role assignment.
 
 <p align="center">
 <img src="https://imgur.com/2mIGkcD.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
@@ -42,7 +42,7 @@ Next, we need to add the "Key Vault Administrator" role to our user. To do this 
 
 <h3>Creating an Azure Secret Value:</h3>
 
-Now that we have our key vault created we are now able to create a "Secret Value" to store in our key vault. To do this go to your key vault and click on the "Objects" option then select the "Secrets" option. Next, select the "+ Generate/Import" option and this should take you to the "Create a Secret" settings page. Enter in a name for this "Secret" then enter in a "Secret Value". Once that is done click the blue "Create" option and verify that your secret was creating by view your secret value.
+Now that we have our key vault created, we can add a "Secret Value" to store in it. To do this, go to your key vault and click on the "Objects" option, then select "Secrets." Next, click on the "+ Generate/Import" option, which will take you to the "Create a Secret" settings page. Enter a name for the "Secret" and input the "Secret Value." Once you've done this, click the blue "Create" button and verify that your secret was created by viewing the secret value.
 
 <p align="center">
 <img src="https://imgur.com/R27Mmrq.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
@@ -50,7 +50,7 @@ Now that we have our key vault created we are now able to create a "Secret Value
 
 <h3>Enabling Logging for Azure Key Vault:</h3>
 
-Next, we need to enable logging for our secret vault. To do this go to your secret vault and find the "Monitoring" option then click on "Diagnostic Settings". Next click on the "Add diagnostic settings" option and this should take you to the "Diagnostic Settings" configuration page. Enter in a name in the "Diagnostic settings name" field then make sure that "allLogs" and "audit" boxes are checkmarked. Afterwards, check the "Stream to an event hub" option and set the "Event Hub Namespace" field to your namespace then set the "Event hub name" option to the event hub we created for our key vault logs. Finally, click the "Save" icon and verify that your configuration was saved. 
+Next, we need to enable logging for our key vault. To do this, go to your key vault and find the "Monitoring" option, then click on "Diagnostic Settings." Click on the "Add diagnostic settings" option, which will take you to the "Diagnostic Settings" configuration page. Enter a name in the "Diagnostic settings name" field, and ensure that the "allLogs" and "audit" boxes are checked. Then, select the "Stream to an event hub" option, setting the "Event Hub Namespace" field to your namespace and the "Event Hub name" option to the event hub we created for key vault logs. Finally, click the "Save" icon and verify that your configuration was saved.
 
 <p align="center">
 <img src="https://imgur.com/6Y4dfMh.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
@@ -58,25 +58,25 @@ Next, we need to enable logging for our secret vault. To do this go to your secr
 
 <h3>Azure Logs Elastic Integration:</h3>
 
-Now, that we have logging enabled we need to ingest those logs into our Elastic environment. To do this we are going to use the "Azure Logs" integration tool. First, go into your Elastic environment and search "Azure Logs" in the search box then click on the option that appears. Afterwards, click onthe blue "Add Azure Logs" button. 
+Now that we have logging enabled, we need to ingest those logs into our Elastic environment. To do this, we will use the "Azure Logs" integration tool. First, go into your Elastic environment and search for "Azure Logs" in the search box, then click on the option that appears. Afterward, click on the blue "Add Azure Logs" button.
 
 <p align="center">
 <img src="https://imgur.com/c4GWTLq.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
 
-We should now be on the "Azure Logs" configuration page. This is where we are going to enter the information needed to ingest our logs. First, enter in the Event Hub Name that we created. Now we need to enter in the "Connection String" for out Event Hub. A "Connection String" is a string of text that provides the necessary information for an application to connect to an Azure Event Hub. To do this go to your Even Hub and click on the "Settings" option then select the "Shared Access Policies" option. Afterwards, click of the "+ Add" option and enter in a name for this policy then make sure to checkmark the "Manage" option. Finally, save the policy and view the policy to find the "Connection string-primary key". Copy this key into the "Connection String" field in the Azure Logs integration tool.
+We should now be on the "Azure Logs" configuration page. This is where we will enter the information needed to ingest our logs. First, input the Event Hub Name that we created. Next, we need to provide the "Connection String" for our Event Hub. A "Connection String" is a piece of text that provides the necessary information for an application to connect to an Azure Event Hub. To obtain this, go to your Event Hub, click on the "Settings" option, and then select "Shared Access Policies." Click on "+ Add," enter a name for the policy, and ensure the "Manage" option is checked. Save the policy, and view it to find the "Connection string-primary key." Copy this key into the "Connection String" field in the Azure Logs integration tool.
 
 <p align="center">
 <img src="https://imgur.com/d27RkVw.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
 
-Next, we need to add the name of our storage account in the "Storage Account" field. Next, we need to enter in the "Storage Account Key". To do this go to your storage account in your azure tentant and look for the "Security + networking" option. Select that option then look for the "Key" field under the "Key1" section. Click on the blue "Show" button and copy the key. Paste the key in the "Storage Account Key" field in the integration tool. Afterwards, scroll to the "Collect events from Event Hub" section and click on the "Change defaults" option then make sure that the "Parse azure message" option is enabled. 
+Next, we need to add the name of our storage account in the "Storage Account" field. Then, we need to enter the "Storage Account Key." To obtain this key, go to your storage account in your Azure tenant, find the "Security + networking" option, and select it. Look for the "Key" field under the "Key1" section, click the blue "Show" button, and copy the key. Paste this key into the "Storage Account Key" field in the integration tool. Afterward, scroll to the "Collect events from Event Hub" section, click on the "Change defaults" option, and ensure that the "Parse Azure message" option is enabled.
 
 <p align="center">
 <img src="https://imgur.com/WLUkp2U.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
 
-The last thing we need to do is to add this integration tool to our existing Azure VM host. To do this scrol down to "Where to add this integration" and select the "Existing Hosts" option then select our Ubuntu Azure VM as the "Agent Policy". Finally, select the "Save and continue" button and save the Azure Logs integration settings.
+The last step is to add this integration tool to our existing Azure VM host. To do this, scroll down to the "Where to add this integration" section and select the "Existing Hosts" option. Then, choose our Ubuntu Azure VM as the "Agent Policy." Finally, click the "Save and continue" button to save the Azure Logs integration settings.
 
 <p align="center">
 <img src="https://imgur.com/4N0jRza.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
@@ -106,7 +106,7 @@ To simulate this attack simply go to the "Secret" we created and view the secret
 
 <h3>Unauthorized Access to Azure Key Vault Query:</h3>
 
-In order to create a query for this detection first we must think about what exactly are we looking for. For this detection we want to alert every time someone views our secret value from our key vault. We would want to look for the "mysecretvalue" Secret and the "SecretGet" operation in our logs. After doing some research this is the query that we are going to use for our detection:
+To create a query for this detection, we first need to define what we're looking for. In this case, we want to trigger an alert every time someone views our secret value from the Key Vault. Specifically, we need to search for logs that reference the "mysecretvalue" secret and the "SecretGet" operation. After conducting some research, this is the query we'll use for our detection:
 
 ```SQL
 
@@ -129,7 +129,7 @@ Now that we have our query we are ready to create our detection rule.
 
 <b>Define Rule:</b>
 
-Now that we have our query we are now going to create our detection rule. To do this copy the query and click on the hamburger icon on the top-left corner of the page. Scroll down to "Security" and select the "Rules" option. Afterwards click on "Detection Rules (SIEM)" and then select "Create New Rule". Make sure that the "Custom Query" option is selected then scroll down and paste our query. Next scroll down to the "Suppress alerts by" option and enter in "source.ip". Then select "Per time period" and select 5 minutes. What this will do is reduce the noise generated by repetitive alerts by grouping similar alerts together.
+Now that we have our query, we can proceed to create our detection rule. First, copy the query and click on the hamburger icon in the top-left corner of the page. Scroll down to "Security" and select the "Rules" option. Next, click on "Detection Rules (SIEM)" and then choose "Create New Rule." Ensure that the "Custom Query" option is selected. Scroll down and paste the query into the provided field. Proceed to the "Suppress alerts by" section, enter "source.ip" in the appropriate field, and select "Per time period," setting it to 5 minutes. This configuration will help reduce the noise generated by repetitive alerts by grouping similar alerts together.
 
 <p align="center">
 <img src="https://imgur.com/1V1PaDQ.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
@@ -137,7 +137,7 @@ Now that we have our query we are now going to create our detection rule. To do 
 
 <b>About Rule:</b>
 
-Next we are going to fill out the About Rule section. We are going to name the alert "Super Secret Value Viewed!" and enter in a description for the rule. Set the "Default severity" to "Medium" then click on "Advance Settings". Scroll down to until you see "MITRE ATT&CK threats" and select the option for "Exfiltration" for the tactic and then add a technique and set it to "Exfiltration Over Web Service". Finally, add a subtechnique and set it to "Exfiltration to Cloud Storage".
+Next, we need to complete the "About Rule" section. Name the alert "Super Secret Value Viewed!" and provide a description for the rule. Set the "Default severity" to "Medium." Click on "Advanced Settings" and scroll down to find the "MITRE ATT&CK threats" section. Select "Exfiltration" as the tactic, then add a technique and set it to "Exfiltration Over Web Service." Finally, add a sub-technique and set it to "Exfiltration to Cloud Storage."
 
 <p align="center">
 <img src="https://imgur.com/h3IOeVT.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
@@ -146,7 +146,7 @@ Next we are going to fill out the About Rule section. We are going to name the a
 
 <b>Schedule Rule:</b>
 
-Afterward, we will set the duration for how long the rule should run. We will set the rule to run every 5 minutes with a look-back time of 5 minutes. You can adjust this however you'd like.
+Afterward, we will configure the duration for how long the rule should run. Set the rule to execute every 5 minutes with a look-back time of 5 minutes. You can adjust these settings as needed.
 
 <p align="center">
 <img src="https://imgur.com/bZM4ADq.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
@@ -154,7 +154,7 @@ Afterward, we will set the duration for how long the rule should run. We will se
 
 <b>Rule Actions:</b>
 
-Finally, we can set what action Elastic should take when this rule triggers. We can set it to send an email, send a message with slack, use microsoft teams etc. For this project we dont have to set it to anything simply click on the "Create & Enable rule" button.
+Finally, we need to determine the action Elastic should take when the rule is triggered. Options include sending an email, messaging via Slack, or using Microsoft Teams, among others. For this project, no action needs to be configured. Simply click on the "Create & Enable rule" button.
 
 <p align="center">
 <img src="https://imgur.com/4Sd0G0p.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
@@ -162,7 +162,7 @@ Finally, we can set what action Elastic should take when this rule triggers. We 
 
 <b>Results:</b>
 
-Now that we have set our rule we can then view our secret value again and this should trigger the alert. We can view the alert by going to "Security" and selecting the "Alerts" option. This is what the alert should look like when it triggers.
+Now that our rule is set, we can view the secret value again to trigger the alert. To see the alert, go to "Security" and select the "Alerts" option. This is what the alert should look like when it is triggered.
 
 <p align="center">
 <img src="https://imgur.com/2Y0MkDq.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
