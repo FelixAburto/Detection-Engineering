@@ -101,8 +101,9 @@ This project employs Elastic Security SIEM to ingest, monitor, and analyze data 
 
 - **[Attack 2 : Windows & Linux Brute Force Attack ](https://github.com/FelixAburto/Detection-Engineering/tree/Windows-and-Linux-Brute-Force-Attack)** &nbsp;&nbsp;&nbsp;<img src="https://cdn-icons-png.flaticon.com/512/6689/6689968.png" alt="Icon" style="width: 5%; height: auto; vertical-align: middle;"/>
 
+</br>
 
-- **[Attack 3 : Metasploit Reverse Shell & Elastic Defend ](https://github.com/FelixAburto/Detection-Engineering/tree/Reverse-Shell)** &nbsp;&nbsp;&nbsp;<img src="https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/v1469039917/hodwdopd059vkn2k1b5a.png" alt="Icon" style="width: 15%; height: auto; vertical-align: middle;"/>
+- **[Attack 3 : Metasploit Reverse Shell & Elastic Defend ](https://github.com/FelixAburto/Detection-Engineering/tree/Reverse-Shell)** &nbsp;&nbsp;&nbsp;<img src="https://az639995.vo.msecnd.net/runtimecontent/companyfiles/24065/13613/screenshot-131001879959264076.png" alt="Icon" style="width: 5%; height: auto; vertical-align: middle;"/>
 
 
 </br>
@@ -113,7 +114,6 @@ This project employs Elastic Security SIEM to ingest, monitor, and analyze data 
 
 - **[Attack 4 : Denial of Service & Distributed Denial of Service](https://github.com/FelixAburto/Detection-Engineering/tree/Denial-of-Service-%26-Distributed-Denial-Of-Service)** &nbsp;&nbsp;&nbsp;<img src="https://cdn-icons-png.flaticon.com/512/4046/4046203.png" alt="Icon" style="width: 5%; height: auto; vertical-align: middle;"/>
 
-</br>
 
 - **[Attack 5 : Pass the Hash](https://github.com/FelixAburto/Detection-Engineering/tree/Pass-The-Hash)** &nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/u80FCmz.png" alt="Icon" style="width: 10%; height: auto; vertical-align: middle;"/>
 
