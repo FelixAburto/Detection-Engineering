@@ -292,7 +292,7 @@ Next, we need to fill out the About Rule section. Name the alert "SQL Injection 
 Afterward, set the duration for how long the rule should run. Configure the rule to run every 5 minutes with a look-back time of 5 minutes. You can adjust these settings as needed.
 
 <p align="center">
-<img src="https://i.imgur.com/pdRFGaf.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+<img src="https://imgur.com/bZM4ADq.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
 
 <b>Rule Actions:</b>
@@ -300,7 +300,7 @@ Afterward, set the duration for how long the rule should run. Configure the rule
 Finally, set the action Elastic should take when the rule triggers. You can choose to send an email, send a message via Slack, use Microsoft Teams, or other options. For this project, you don’t need to set up any actions; simply click on the "Create & Enable rule" button.
 
 <p align="center">
-<img src="https://i.imgur.com/8Hm9GXc.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+<img src="https://imgur.com/4Sd0G0p.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
 
 <b>Results:</b>
