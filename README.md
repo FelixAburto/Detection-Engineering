@@ -38,7 +38,7 @@ To execute our reflected XSS attack, first locate the "What's your name?" field.
 The page should display an alert after clicking the "Submit" button. Once that is done we have successfully executed our reflected XSS attack.
 
 <p align="center">
-<img src="https://imgur.com/GSD9aoP.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+<img src="https://imgur.com/HkcosXV.gif" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
 
 </br>
