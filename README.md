@@ -9,46 +9,46 @@
 
 <h2>Description</h2>
 
-This project utilizes Elastic Security SIEM to ingest, monitor, and analyze data from three distinct environments in order to develop effective threat detection rules. The objective is to demonstrate how to effectively detect various simulated cyber threats, enhancing overall security posture.
+This project employs Elastic Security SIEM to ingest, monitor, and analyze data from three distinct environments, aiming to develop effective threat detection rules. The objective is to demonstrate how to accurately detect various simulated cyber threats, thereby enhancing the overall security posture.
 
 <br />
 
 # Environment Details
 
 ### **Environment 1 : Internal Network 10.0.0.0/24**
-- <b>Ubuntu (Zeek/Bro, 10.0.0.3):</b> Deployed with Zeek/Bro For network traffic monitoring and analysis
-- <b>Windows 11 (10.0.0.4):</b> Serves as the victim machine to capture and analyze the effects of the attacks
-- <b>Parrot OS (10.0.0.5):</b> Functions as the attack machine to simulate different types of cyber attacks
+- <b>Ubuntu (Zeek/Bro, 10.0.0.3):</b> Deployed with Zeek/Bro for network traffic monitoring and analysis.
+- <b>Windows 11 (10.0.0.4):</b> Serves as the victim machine to capture and analyze the effects of attacks.
+- <b>Parrot OS (10.0.0.5):</b> Functions as the attack machine to simulate different types of cyber attacks.
 
 <br />
 
 ### **Environment 2 : Internal Network 192.168.1.0/24**
-- <b>Ubuntu (Zeek/Bro, 192.168.1.3):</b> Deployed with Zeek/Bro For network traffic monitoring and analysis
-- <b>Windows 11 (192.168.1.4):</b> Serves as the victim machine to capture and analyze the effects of the attacks
-- <b>Parrot OS (192.168.1.5):</b> Functions as the attack machine to simulate different types of cyber attacks
-- <b>Kali Linux (192.168.1.6):</b> Additional attak machine to introduce a broader range of attack vectors
-
+- <b>Ubuntu (Zeek/Bro, 192.168.1.3):</b> Deployed with Zeek/Bro for network traffic monitoring and analysis.
+- <b>Windows 11 (192.168.1.4):</b> Serves as the victim machine to capture and analyze the effects of attacks.
+- <b>Parrot OS (192.168.1.5):</b> Functions as the attack machine to simulate different types of cyber attacks.
+- <b>Kali Linux (192.168.1.6):</b>  Additional attack machine to introduce a broader range of attack vectors.
 <br />
 
 ### **Environment 3 : Azure Cloud Environment**
-- <b>Apache Web Server VM (Ubuntu):</b> Hosts the Damn Vulnerable Web Application to simulate web application attacks
-- <b>Azure Storage Account:</b> Contains a blob file to similute data exfiltration and unauthorized access
-- <b>Azure Key Vault:</b> Stores secret values to simulate unauthorize access.
+- <b>Apache Web Server VM (Ubuntu):</b> Hosts the Damn Vulnerable Web Application to simulate web application attacks.
+- <b>Azure Storage Account:</b> Contains a blob file to simulate data exfiltration and unauthorized access.
+- <b>Azure Key Vault:</b>  Stores secret values to simulate unauthorized access.
 
 <br />
 
 ### **Simulated Attacks**
 
-- <b>Brute Force Attacks:</b> Simulates unauthorized access attempts to Windows and Linux machines through brute force techniques
-- <b>DDOS Attacks:</b> Simulates Distributed Denial of Service attacks 
-- <b>Wannacry Ransomeware Attack:</b> Simulates the Wannacry ransomware attack to test the detection of ransomeware threats
-- <b>Port Enumeration and Web Scanning:</b> Simulates network reconnaissance and vulnerability scanning activities
-- <b>Reverse Shell Attacks:</b> Simulates gaining remote access to a machine
-- <b>Pass The Hash Attacks:</b> Simulates credential theft and reuse 
-- <b>SQL Injection:</b> Simulates SQL Injection attacks on a vulnerable web server
-- <b>XSS Attacks (Reflected, Stored, and DOM):</b>Simulates Cross-Site Scripting atacks on a vulnerable web server
-- <b>Detecting Azure Blob Download:</b> Simulates unauthorized access and download of blob storage files
-- <b>Detecting Azure Key Vault Events:</b> Simulates unauthorized access to secret keys/values stored in Azure Key Vault
+- <b>Brute Force Attacks:</b> Simulates unauthorized access attempts to Windows and Linux machines through brute force techniques.
+- <b> DOS & DDOS Attacks:</b> Simulates Denial of Service and Distributed Denial of Service attacks.
+- <b>Wannacry Ransomeware Attack:</b> Simulates the Wannacry ransomware attack to test the detection of ransomware threats.
+- <b>Port Enumeration and Web Scanning:</b> Simulates network reconnaissance and vulnerability scanning activities.
+- <b>Reverse Shell Attacks:</b> Simulates gaining remote access to a machine.
+- <b>Pass The Hash Attacks:</b> Simulates credential theft and reuse.
+- <b>SQL Injection:</b> Simulates SQL Injection attacks on a vulnerable web server.
+- <b>XSS Attacks (Reflected, Stored, and DOM):</b> Simulates Cross-Site Scripting attacks on a vulnerable web server.
+- <b>Detecting Azure Blob Download:</b> Simulates unauthorized access and download of blob storage files.
+- <b>Detecting Azure Key Vault Events:</b> Simulates unauthorized access to secret keys/values stored in Azure Key Vault.
+- <b> Man in the Middle Attacks:</b> Simulates data exfiltration through a Man in the Middle attack.
 
 <br />
 <br />
