@@ -20,3 +20,4 @@
 - Blob storage logo : https://img.icons8.com/?size=512&id=84280&format=png
 - Keyvault Logo : https://miro.medium.com/v2/resize:fit:600/1*b0oZ-Da1LxW4TdujAOiC9Q.png
 - MitM Logo : https://blogs.vmware.com/euc/files/2018/10/roxane_sanusersroxanedownloadsmitm-png.png
+- Team Ghost Detection Engineering Logo : https://media.licdn.com/dms/image/D5610AQHnJ9zvTw-nwg/image-shrink_800/0/1712340000606?e=2147483647&v=beta&t=YRfZDej-iAxiV5tEfWHCtzrqrkkz2REhTpRsZ0TqjyQ
