@@ -160,7 +160,7 @@ Afterward, we will configure the duration for how long the rule should run. Set 
 Finally, we need to configure the action Elastic should take when this rule triggers. Options include sending an email, sending a message via Slack, using Microsoft Teams, and more. For this project, you don’t need to set any actions. Simply click the "Create & Enable Rule" button to complete the setup.
 
 <p align="center">
-<img src="https://i.imgur.com/8Hm9GXc.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+<img src="https://imgur.com/4Sd0G0p.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
 
 <b>Results:</b>
@@ -221,7 +221,7 @@ Afterward, we will configure the duration for how long the rule should run. Set 
 Finally, we need to configure the action Elastic should take when this rule triggers. Options include sending an email, sending a message via Slack, using Microsoft Teams, and more. For this project, you don’t need to set any actions. Simply click the "Create & Enable Rule" button to complete the setup.
 
 <p align="center">
-<img src="https://i.imgur.com/8Hm9GXc.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+<img src="https://imgur.com/4Sd0G0p.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
 
 <b>Results:</b>
@@ -282,7 +282,7 @@ Afterward, we will configure the duration for how long the rule should run. Set 
 Finally, we need to configure the action Elastic should take when this rule triggers. Options include sending an email, sending a message via Slack, using Microsoft Teams, and more. For this project, you don’t need to set any actions. Simply click the "Create & Enable Rule" button to complete the setup.
 
 <p align="center">
-<img src="https://i.imgur.com/8Hm9GXc.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+<img src="https://imgur.com/4Sd0G0p.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
 
 <b>Results:</b>
@@ -353,7 +353,7 @@ Afterward, we will configure the duration for how long the rule should run. Set 
 Finally, we need to configure the action Elastic should take when this rule triggers. Options include sending an email, sending a message via Slack, using Microsoft Teams, and more. For this project, you don’t need to set any actions. Simply click the "Create & Enable Rule" button to complete the setup.
 
 <p align="center">
-<img src="https://i.imgur.com/8Hm9GXc.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
+<img src="https://imgur.com/4Sd0G0p.png" height="100%" width="100%" alt="Detection Engineering Logo Team Ghost"/>
 </p>
 
 <b>Results:</b>
