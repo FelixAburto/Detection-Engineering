@@ -91,7 +91,7 @@ When creating the query for a detection rule, it's crucial to balance its specif
 
 <h3>Nmap Query:</h3>
 
-TTo create a detection rule for an Nmap scan, start by heading into your Elastic environment and navigating to the "Analytics" section. From there, click on the "Discover" option. This is where we will use the Kibana Query Language (KQL) to create the query that the detection rule will use to alert on Nmap scans. In the search box, enter "***nmap***", which will bring up all the logs that contain the word "nmap" in any field. You should now see several Nmap logs that were ingested into your Elastic environment. To examine one of these logs, click on the arrow icon located on the left side of the log entry.
+To create a detection rule for an Nmap scan, start by heading into your Elastic environment and navigating to the "Analytics" section. From there, click on the "Discover" option. This is where we will use the Kibana Query Language (KQL) to create the query that the detection rule will use to alert on Nmap scans. In the search box, enter "***nmap***", which will bring up all the logs that contain the word "nmap" in any field. You should now see several Nmap logs that were ingested into your Elastic environment. To examine one of these logs, click on the arrow icon located on the left side of the log entry.
 
 
 <p align="center">
